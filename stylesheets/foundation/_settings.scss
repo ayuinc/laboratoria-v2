@@ -43,7 +43,7 @@
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $font-family-base: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -56,12 +56,12 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #008CBA;
+$brand-primary: #008CBA;
 $secondary-color: #e7e7e7;
-$alert-color: #f04124;
-$success-color: #43AC6A;
-$warning-color: #f08a24;
-$info-color: #a0d3e8;
+$brand-warning: #f04124;
+$brand-success: #43AC6A;
+$brand-danger: #f08a24;
+$brand-info: #a0d3e8;
 
 // Grayscale
 $gray-darker:            lighten(#313233, 0%) !default; // #222
@@ -127,7 +127,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+// $header-font-family: $font-family-base;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: #222;
@@ -175,15 +175,15 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
-// $code-color: scale-color($alert-color, $lightness: -27%);
+// $code-color: scale-color($brand-warning, $lightness: -27%);
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 // $code-font-weight: $font-weight-bold;
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+// $anchor-font-color: $brand-primary;
+// $anchor-font-color-hover: scale-color($brand-primary, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -249,7 +249,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
 // $accordion-navigation-font-color: #222;
 // $accordion-navigation-font-size: rem-calc(16);
-// $accordion-navigation-font-family: $body-font-family;
+// $accordion-navigation-font-family: $font-family-base;
 
 // $accordion-content-padding: $column-gutter/2;
 // $accordion-content-active-bg-color: #fff;
@@ -276,7 +276,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // We use these to control border styles.
 // $alert-border-style: solid;
 // $alert-border-width: 1px;
-// $alert-border-color: scale-color($primary-color, $lightness: $alert-function-factor);
+// $alert-border-color: scale-color($brand-primary, $lightness: $alert-function-factor);
 // $alert-bottom-margin: rem-calc(20);
 
 // We use these to style the close buttons
@@ -329,7 +329,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 
 // We use these to set various text styles for breadcrumbs.
 // $crumb-font-size: rem-calc(11);
-// $crumb-font-color: $primary-color;
+// $crumb-font-color: $brand-primary;
 // $crumb-font-color-current: #333;
 // $crumb-font-color-unavailable: #999;
 // $crumb-font-transform: uppercase;
@@ -356,7 +356,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-// $button-font-family: $body-font-family;
+// $button-font-family: $font-family-base;
 // $button-font-color: #fff;
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);
@@ -372,7 +372,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // We use these to control button border styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg: $primary-color;
+// $button-bg: $brand-primary;
 // $button-border-color: scale-color($bg, $lightness: $button-function-factor);
 
 // We use this to set the default radius used throughout the core.
@@ -670,7 +670,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $label-font-weight: $font-weight-normal;
 // $label-font-color: #333;
 // $label-font-color-alt: #fff;
-// $label-font-family: $body-font-family;
+// $label-font-family: $font-family-base;
 
 // Magellan
 
@@ -813,11 +813,11 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $pagination-link-unavailable-bg-active: transparent;
 
 // We use these for currently selected anchor links
-// $pagination-link-current-background: $primary-color;
+// $pagination-link-current-background: $brand-primary;
 // $pagination-link-current-font-color: #fff;
 // $pagination-link-current-font-weight: $font-weight-bold;
 // $pagination-link-current-cursor: default;
-// $pagination-link-current-active-bg: $primary-color;
+// $pagination-link-current-active-bg: $brand-primary;
 
 // Panels
 
@@ -841,7 +841,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $panel-font-color-alt: #fff;
 
 // $panel-header-adjust: true;
-// $callout-panel-link-color: $primary-color;
+// $callout-panel-link-color: $brand-primary;
 
 // Pricing Tables
 
@@ -860,7 +860,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $price-title-color: #eee;
 // $price-title-weight: $font-weight-normal;
 // $price-title-size: rem-calc(16);
-// $price-title-font-family: $body-font-family;
+// $price-title-font-family: $font-family-base;
 
 // We use these to control the price styles
 // $price-money-bg: #f6f6f6  ;
@@ -869,7 +869,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $price-money-color: #333;
 // $price-money-weight: $font-weight-normal;
 // $price-money-size: rem-calc(32);
-// $price-money-font-family: $body-font-family;
+// $price-money-font-family: $font-family-base;
 
 
 // We use these to control the description styles
@@ -914,10 +914,10 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $progress-bar-margin-bottom: rem-calc(10);
 
 // We use these to set the meter colors
-// $progress-meter-color: $primary-color;
+// $progress-meter-color: $brand-primary;
 // $progress-meter-secondary-color: $secondary-color;
-// $progress-meter-success-color: $success-color;
-// $progress-meter-alert-color: $alert-color;
+// $progress-meter-success-color: $brand-success;
+// $progress-meter-alert-color: $brand-warning;
 
 // Reveal
 
@@ -966,13 +966,13 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-// $side-nav-link-color: $primary-color;
+// $side-nav-link-color: $brand-primary;
 // $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
 // $side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: 30%);
 // $side-nav-font-size: rem-calc(14);
 // $side-nav-font-weight: $font-weight-normal;
 // $side-nav-font-weight-active: $side-nav-font-weight;
-// $side-nav-font-family: $body-font-family;
+// $side-nav-font-family: $font-family-base;
 // $side-nav-active-font-family: $side-nav-font-family;
 
 
@@ -1029,7 +1029,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $sub-nav-list-padding-top: rem-calc(4);
 
 // We use this to control the definition
-// $sub-nav-font-family: $body-font-family;
+// $sub-nav-font-family: $font-family-base;
 // $sub-nav-font-size: rem-calc(14);
 // $sub-nav-font-color: #999;
 // $sub-nav-font-weight: $font-weight-normal;
@@ -1041,7 +1041,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 
 // We use these to control the active item styles
 // $sub-nav-active-font-weight: $font-weight-normal;
-// $sub-nav-active-bg: $primary-color;
+// $sub-nav-active-bg: $brand-primary;
 // $sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%);
 // $sub-nav-active-color: #fff;
 // $sub-nav-active-padding: $sub-nav-padding;
@@ -1084,7 +1084,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $switch-paddle-border-style: solid;
 // $switch-paddle-transition-speed: .1s;
 // $switch-paddle-transition-ease: ease-out;
-// $switch-positive-color: scale-color($success-color, $lightness: 94%);
+// $switch-positive-color: scale-color($brand-success, $lightness: 94%);
 // $switch-negative-color: #f5f5f5;
 
 // Outline Style for tabbing through switches
@@ -1133,7 +1133,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $tabs-navigation-font-color: #222;
 // $tabs-navigation-active-font-color: $tabs-navigation-font-color;
 // $tabs-navigation-font-size: rem-calc(16);
-// $tabs-navigation-font-family: $body-font-family;
+// $tabs-navigation-font-family: $font-family-base;
 
 // $tabs-content-margin-bottom: rem-calc(24);
 // $tabs-content-padding: $column-gutter/2;
@@ -1151,7 +1151,7 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $thumb-border-width: 4px;
 // $thumb-border-color: #fff;
 // $thumb-box-shadow: 0 0 0 1px rgba(#000,.2);
-// $thumb-box-shadow-hover: 0 0 6px 1px rgba($primary-color,0.5);
+// $thumb-box-shadow-hover: 0 0 6px 1px rgba($brand-primary,0.5);
 
 // Radius and transition speed for thumbs
 // $thumb-radius: $global-radius;
@@ -1166,8 +1166,8 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $has-tip-border-bottom: dotted 1px #ccc;
 // $has-tip-font-weight: $font-weight-bold;
 // $has-tip-font-color: #333;
-// $has-tip-border-bottom-hover: dotted 1px scale-color($primary-color, $lightness: -55%);
-// $has-tip-font-color-hover: $primary-color;
+// $has-tip-border-bottom-hover: dotted 1px scale-color($brand-primary, $lightness: -55%);
+// $has-tip-font-color-hover: $brand-primary;
 // $has-tip-cursor-type: help;
 
 // $tooltip-padding: rem-calc(12);
@@ -1222,9 +1222,9 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-color-hover: #555555;
 // $topbar-link-bg-hover: #272727;
-// $topbar-link-bg-active: $primary-color;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
+// $topbar-link-bg-active: $brand-primary;
+// $topbar-link-bg-active-hover: scale-color($brand-primary, $lightness: -14%);
+// $topbar-link-font-family: $font-family-base;
 // $topbar-link-text-transform: none;
 // $topbar-link-padding: $topbar-height / 3;
 
@@ -1293,11 +1293,11 @@ $gray-lighter:           lighten(#313233, 77%) !default; // #eee
 // $range-slider-handle-width: rem-calc(32);
 // $range-slider-handle-height: rem-calc(22);
 // $range-slider-handle-position-top: rem-calc(-5);
-// $range-slider-handle-bg-color: $primary-color;
+// $range-slider-handle-bg-color: $brand-primary;
 // $range-slider-handle-border-width: 1px;
 // $range-slider-handle-border-style: solid;
 // $range-slider-handle-border-color: none;
 // $range-slider-handle-radius: $global-radius;
 // $range-slider-handle-round: $global-rounded;
-// $range-slider-handle-bg-hover-color: scale-color($primary-color, $lightness: -12%);
+// $range-slider-handle-bg-hover-color: scale-color($brand-primary, $lightness: -12%);
 // $range-slider-handle-cursor: pointer;

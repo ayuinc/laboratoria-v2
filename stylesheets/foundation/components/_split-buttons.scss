@@ -60,12 +60,12 @@ $split-button-pip-default-float-lrg: rem-calc(-6) !default;
 //
 // $padding - Type of padding to apply. Default: medium. Options: tiny, small, medium, large.
 // $pip-color - Color of the triangle. Default: $split-button-pip-color.
-// $span-border - Border color of button divider. Default: $primary-color.
+// $span-border - Border color of button divider. Default: $brand-primary.
 // $base-style - Apply base style to split button. Default: true.
 @mixin split-button(
   $padding:medium,
   $pip-color:$split-button-pip-color, 
-  $span-border:$primary-color, 
+  $span-border:$brand-primary, 
   $base-style:true) {
 
   // With this, we can control whether or not the base styles come through.
@@ -173,8 +173,8 @@ $split-button-pip-default-float-lrg: rem-calc(-6) !default;
     .split.button { @include split-button;
 
       &.secondary { @include split-button(false, $split-button-pip-color, $secondary-color, false); }
-      &.alert { @include split-button(false, false, $alert-color, false); }
-      &.success { @include split-button(false, false, $success-color, false); }
+      &.alert { @include split-button(false, false, $brand-warning, false); }
+      &.success { @include split-button(false, false, $brand-success, false); }
 
       &.tiny { @include split-button(tiny, false, false, false); }
       &.small { @include split-button(small, false, false, false); }

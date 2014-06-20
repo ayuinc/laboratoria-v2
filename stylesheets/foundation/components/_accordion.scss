@@ -16,7 +16,7 @@ $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color
 $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%) !default;
 $accordion-navigation-font-color: #222 !default;
 $accordion-navigation-font-size: rem-calc(16) !default;
-$accordion-navigation-font-family: $body-font-family !default;
+$accordion-navigation-font-family: $font-family-base !default;
 
 $accordion-content-padding: $column-gutter/2 !default;
 $accordion-content-active-bg-color: #fff !default;

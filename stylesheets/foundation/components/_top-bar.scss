@@ -43,9 +43,9 @@ $topbar-link-hover-lightness: -10% !default; // Darken by 10%
 $topbar-link-bg: $topbar-bg !default;
 $topbar-link-bg-hover: #272727 !default;
 $topbar-link-bg-color-hover: #555555 !default;
-$topbar-link-bg-active: $primary-color !default;
-$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%) !default;
-$topbar-link-font-family: $body-font-family !default;
+$topbar-link-bg-active: $brand-primary !default;
+$topbar-link-bg-active-hover: scale-color($brand-primary, $lightness: -14%) !default;
+$topbar-link-font-family: $font-family-base !default;
 $topbar-link-text-transform: none !default;
 $topbar-link-padding: $topbar-height / 3 !default;
 
@@ -313,22 +313,22 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
             font-size: $topbar-link-font-size;
             padding-#{$opposite-direction}: $topbar-link-padding;
             padding-#{$default-float}: $topbar-link-padding;
-            @include button-style($bg:$primary-color);
+            @include button-style($bg:$brand-primary);
           }
           &.button.secondary { @include button-style($bg:$secondary-color); }
-          &.button.success { @include button-style($bg:$success-color); }
-          &.button.alert { @include button-style($bg:$alert-color); }
+          &.button.success { @include button-style($bg:$brand-success); }
+          &.button.alert { @include button-style($bg:$brand-warning); }
         }
 
         > button {
           font-size: $topbar-link-font-size;
           padding-#{$opposite-direction}: $topbar-link-padding;
           padding-#{$default-float}: $topbar-link-padding;
-          @include button-style($bg:$primary-color);
+          @include button-style($bg:$brand-primary);
 
           &.secondary { @include button-style($bg:$secondary-color); }
-          &.success { @include button-style($bg:$success-color); }
-          &.alert { @include button-style($bg:$alert-color); }
+          &.success { @include button-style($bg:$brand-success); }
+          &.alert { @include button-style($bg:$brand-warning); }
         }
 
         // Apply the hover link color when it has that class

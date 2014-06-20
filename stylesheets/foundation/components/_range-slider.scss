@@ -34,13 +34,13 @@ $range-slider-vertical-bar-height: rem-calc(200) !default;
 $range-slider-handle-width: rem-calc(32) !default;
 $range-slider-handle-height: rem-calc(22) !default;
 $range-slider-handle-position-top: rem-calc(-5) !default;
-$range-slider-handle-bg-color: $primary-color !default;
+$range-slider-handle-bg-color: $brand-primary !default;
 $range-slider-handle-border-width: 1px !default;
 $range-slider-handle-border-style: solid !default;
 $range-slider-handle-border-color: none !default;
 $range-slider-handle-radius: $global-radius !default;
 $range-slider-handle-round: $global-rounded !default;
-$range-slider-handle-bg-hover-color: scale-color($primary-color, $lightness: -12%) !default;
+$range-slider-handle-bg-hover-color: scale-color($brand-primary, $lightness: -12%) !default;
 $range-slider-handle-cursor: pointer !default;
 
 

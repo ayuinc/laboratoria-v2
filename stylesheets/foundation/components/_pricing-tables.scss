@@ -22,7 +22,7 @@ $price-title-align: center !default;
 $price-title-color: #eee !default;
 $price-title-weight: $font-weight-normal !default;
 $price-title-size: rem-calc(16) !default;
-$price-title-font-family: $body-font-family !default;
+$price-title-font-family: $font-family-base !default;
 
 // We use these to control the price styles
 $price-money-bg: #f6f6f6 !default;
@@ -31,7 +31,7 @@ $price-money-align: center !default;
 $price-money-color: #333 !default;
 $price-money-weight: $font-weight-normal !default;
 $price-money-size: rem-calc(32) !default;
-$price-money-font-family: $body-font-family !default;
+$price-money-font-family: $font-family-base !default;
 
 
 // We use these to control the description styles

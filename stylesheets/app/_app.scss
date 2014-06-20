@@ -1,10 +1,16 @@
-/* 
+/*========================================
+=             APP CUSTOM                 =
+========================================*/
 
-	Recuerda que el nombre de tus clases y id's deben de considerar 1 de las siguientes 2 cosas: 
+// APP Includes
+@import 
+  "includes/utilities-custom",
+  "includes/type-custom",
+  "includes/icons",
+  "includes/fonts",
+  "includes/header",
+  "includes/footer";
 
-	1. La funcionalidad que cumplen en el proyecto
-	2. La ubicación en el layout
-
-*/
-
-
+// APP Views
+// @import 
+//   "";

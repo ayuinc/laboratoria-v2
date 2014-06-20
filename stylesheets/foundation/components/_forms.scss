@@ -264,8 +264,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
 // @MIXIN
 //
 // We use this mixin to control border and background color of error inputs
-// $color - Default: $alert-color (found in settings file)
-@mixin form-error-color($color:$alert-color) {
+// $color - Default: $brand-warning (found in settings file)
+@mixin form-error-color($color:$brand-warning) {
   border-color: $color;
   background-color: rgba($color, 0.1);
 
@@ -279,14 +279,14 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
 // @MIXIN
 //
 // We use this simple mixin to style labels for error inputs
-// $color - Default:$alert-color. Found in settings file
-@mixin form-label-error-color($color:$alert-color) { color: $color; }
+// $color - Default:$brand-warning. Found in settings file
+@mixin form-label-error-color($color:$brand-warning) { color: $color; }
 
 // @MIXIN
 //
 // We use this mixin to create error message styles
-// $bg - Default: $alert-color (Found in settings file)
-@mixin form-error-message($bg:$alert-color) {
+// $bg - Default: $brand-warning (Found in settings file)
+@mixin form-error-message($bg:$brand-warning) {
   display: block;
   padding: $input-error-message-padding;
   margin-top: $input-error-message-top;

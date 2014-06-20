@@ -19,7 +19,7 @@ $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightne
 $tabs-navigation-font-color: #222 !default;
 $tabs-navigation-active-font-color: $tabs-navigation-font-color !default;
 $tabs-navigation-font-size: rem-calc(16) !default;
-$tabs-navigation-font-family: $body-font-family !default;
+$tabs-navigation-font-family: $font-family-base !default;
 
 $tabs-content-margin-bottom: rem-calc(24) !default;
 $tabs-content-padding: $column-gutter/2 !default;

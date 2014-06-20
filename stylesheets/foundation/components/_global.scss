@@ -187,8 +187,8 @@ $base-line-height: 150% !default;
 // We use this to add a glowing effect to block elements
 // $selector - Used for selector state. Default: focus, Options: hover, active, visited
 // $fade-time - Default: 300ms
-// $glowing-effect-color - Default: fade-out($primary-color, .25)
-@mixin block-glowing-effect($selector:focus, $fade-time:300ms, $glowing-effect-color:fade-out($primary-color, .25)) {
+// $glowing-effect-color - Default: fade-out($brand-primary, .25)
+@mixin block-glowing-effect($selector:focus, $fade-time:300ms, $glowing-effect-color:fade-out($brand-primary, .25)) {
   transition: box-shadow $fade-time, border-color $fade-time ease-in-out;
 
   &:#{$selector} {
@@ -236,7 +236,14 @@ $font-weight-bold: bold !default;
 // We use these to control various global styles
 $body-bg: #fff !default;
 $body-font-color: #222 !default;
-$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+// $font-family-base: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-alt:         "alt-name", $font-family-sans-serif;
+
+$font-family-base:        $font-family-sans-serif !default;
+
 $body-font-weight: $font-weight-normal !default;
 $body-font-style: normal !default;
 
@@ -255,12 +262,12 @@ $opposite-direction: right !default;
   $opposite-direction: left;
 }
 // We use these as default colors throughout
-$primary-color: #008CBA !default;
+$brand-primary: #008CBA !default;
 $secondary-color: #e7e7e7 !default;
-$alert-color: #f04124 !default;
-$success-color: #43AC6A !default;
-$warning-color: #f08a24 !default;
-$info-color: #a0d3e8 !default;
+$brand-warning: #f04124 !default;
+$brand-success: #43AC6A !default;
+$brand-danger: #f08a24 !default;
+$brand-info: #a0d3e8 !default;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 3px !default;
@@ -380,7 +387,7 @@ $cursor-text-value: text !default;
       color: $body-font-color;
       padding: 0;
       margin: 0;
-      font-family: $body-font-family;
+      font-family: $font-family-base;
       font-weight: $body-font-weight;
       font-style: $body-font-style;
       line-height: 1; // Set to $base-line-height to take on browser default of 150%
