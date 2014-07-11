@@ -5,7 +5,7 @@
   ultima actualizacion: 10 de junio 2014 a las 10:14am
   Desde la consola navega hasta el directorio "stylesheets" y ejecuta: 
 
-  sass --watch main.min.scss:main.min.css compressed --line-comments
+  sass --watch main.min.scss:main.min.css -t compressed
 
 */
 
@@ -53,7 +53,7 @@
 // Animations
 // http://daneden.github.io/animate.css/
 
-@import "animate/animate-init";
+// @import "animate/animate-init";
 
 
 /*========================================

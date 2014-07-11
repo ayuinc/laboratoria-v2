@@ -1,8 +1,9 @@
 // Backgrounds
 .bg-white {background: white !important;}
+.bg-brand-inverse {background: $brand-inverse !important;}
 // Brand colors
 @mixin bg-colors {
-	@if $b3-enabled == false {
+	@if $b3-enabled == true {
 		.bg-primary {background: $brand-primary!important;}
 		.bg-primary-dark {background: darken($brand-primary, 7%)!important;}
 		.bg-info {background: $brand-info!important;}
