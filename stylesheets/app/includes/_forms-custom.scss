@@ -77,14 +77,12 @@ form {
 
 // Form overrides 
 .select-override {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  @include user-select(none);
   position: relative;
   text-indent: 1px;
   text-overflow: "";
   &.input-lg {
     line-height: 28px;
-    background: white url(/img/arrow-down.svg) no-repeat 98%;
+    // background: white url(/img/arrow-down.svg) no-repeat 98%;
   }
 }
