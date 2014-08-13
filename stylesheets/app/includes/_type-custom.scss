@@ -10,17 +10,7 @@ html {
 }
 
 // MAIN TEXT
-h1, h2, h3, h4, h5, h6 {
-  @include book;
-}
 
-strong {
-  @include medium;
-}
-
-p, em, small {
-  @include light;
-}
 
 // TEXT IN REMS
 h1, .h1 { font-size: rem($font-size-h1); }
