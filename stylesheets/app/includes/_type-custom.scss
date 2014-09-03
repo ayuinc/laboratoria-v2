@@ -22,14 +22,14 @@ h6, .h6 { font-size: rem($font-size-h6); }
 p, .p, ul { font-size: rem($font-size-base); }
 
 // Contextual emphasis
-.text-muted {
+.text-white {
   a {
-    color: $text-muted!important;
+    color: white!important;
     &:hover {
-      color: darken($text-muted, 21%);
+      color: darken(white, 21%);
     }
   }
-  color: $text-muted!important;
+  color: white!important;
 }
 
 // GRAYSCALE
