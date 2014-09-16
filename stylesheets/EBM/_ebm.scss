@@ -47,6 +47,12 @@ $include-backgrounds: false;
 // Grayscale:
 // $gray-base: #313233;
 
+// Horizontal Rules Custom
+$include-hr: true;
+
+$hr-width: 2px;
+$hr-style: solid;
+
 @mixin bg-colors($b3-enabled) {
   @if $b3-enabled == false {
     $gray-darker:            lighten($gray-base, 0%); 
@@ -73,6 +79,7 @@ $include-backgrounds: false;
   "ebm-loops-small",
   "min-heights",
   "box-shadow",
+  "horizontal-rules",
   "borders",
   "backgrounds",
   "z-index",
