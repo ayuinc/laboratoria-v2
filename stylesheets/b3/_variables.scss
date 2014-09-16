@@ -17,7 +17,7 @@ $gray-darker:            lighten($gray-base, 0%) !default; // #222
 $gray-dark:              lighten($gray-base, 21%) !default;   // #333
 $gray:                   lighten($gray-base, 35%) !default; // #555
 $gray-light:             lighten($gray-base, 63%) !default;   // #999
-$gray-lighter:           lighten($gray-base, 84%) !default; // #eee
+$gray-lighter:           lighten($gray-base, 77%) !default; // #eee
 
 $brand-primary:         #428bca !default;
 $brand-success:         #5cb85c !default;
@@ -27,10 +27,10 @@ $brand-danger:          #d9534f !default;
 
 $brand-inverse: 				#081A26 !default;
 
-$grayscale-list: $gray-darker, $gray-dark, $gray, $gray-light, $gray-lighter;
+$grayscale-list: $gray-darker, $gray-dark, $gray, $gray-light, $gray-lighter, #fff;
 $brand-colors-list: $brand-primary, $brand-success, $brand-info, $brand-warning, $brand-danger;
 
-$grayscale-sufix-list: gray-lighter, gray-light, gray, gray-dark, gray-darker;
+$grayscale-sufix-list: gray-darker, gray-dark, gray, gray-light, gray-lighter, white;
 $brand-colors-sufix-list: primary, success, info, warning, danger;
 
 

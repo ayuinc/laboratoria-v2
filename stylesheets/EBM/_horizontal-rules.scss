@@ -8,6 +8,13 @@
 				}
 			}
 		}
+		@for $i from 1 through length($grayscale-sufix-list) {
+			hr {
+				&.hr-#{nth($grayscale-sufix-list, $i)} {
+					border-top: $hr-width $hr-style #{nth($grayscale-list, $i)};
+				}
+			}
+		}
 	}
 }
 @include hr-rules;
