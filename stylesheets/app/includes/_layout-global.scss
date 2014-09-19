@@ -1,0 +1,85 @@
+html,
+body {
+	min-height: 100%;
+	height: 100%;
+	&::-webkit-scrollbar { 
+    display: none; 
+	}
+}
+
+.site-wrapper,
+.site-content {
+	min-height: 100%;
+	height: 100%;
+}
+
+// GRID BLOCKS
+.grid-block {
+	padding: $container-fluid 0;
+	padding: rem(($container-fluid)) 0;
+	&.grid-block-sm {
+		padding: ($container-fluid / 2) 0;
+		padding: rem(($container-fluid / 2)) 0;
+	}
+	&.grid-block-md {
+		padding: ($container-fluid * 2) 0;
+		padding: rem(($container-fluid * 2)) 0;
+	}
+	&.grid-block-lg {
+		padding: ($container-fluid * 3) 0;
+		padding: rem(($container-fluid * 3)) 0;
+	}
+}
+
+// GRID LISTS
+ul.grid-list {
+	@include clearfix;
+	margin-left: -($grid-gutter-width / 2);
+	margin-right: -($grid-gutter-width / 2);
+	> li {
+		float: left;
+		padding: $grid-gutter-width / 2;
+		padding: rem($grid-gutter-width / 2);
+	}
+	@for $i from 1 through 12 {
+		&.grid-list-#{$i} {
+			> li {
+				width: percentage(1/$i);
+				@media #{$xs-only} {
+					$mobile-width: percentage(1/$i);
+					width: $mobile-width * 2;
+				}
+			}
+		}
+	}
+	&.grid-list-centered {
+		text-align: center;
+		> li {
+			float: none;
+			display: inline-block;
+		}
+	}
+}
+
+#profiles {
+	.grid-list {
+		> li {
+			a {
+				&:hover {
+
+				}
+				img {
+					width: 160px;
+					height: 160px;
+					padding: 5px;
+					background: white;
+					@include box-shadow(0px 1px 1px 0px $gray-light);
+					@media #{$xs-only} {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}
