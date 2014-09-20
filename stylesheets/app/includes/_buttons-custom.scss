@@ -13,9 +13,9 @@ input[type="submit"].btn {
 	@for $i from 1 through length($brand-colors-sufix-list) {
 		&.btn-#{nth($brand-colors-sufix-list, $i)}.btn-outline {
 			background: none;
-			border: 2px solid #{lighten(nth($brand-colors-list, $i), 21%)};
+			border: 2px solid #{lighten(nth($brand-colors-list, $i), 7%)};
 			border-radius: 0;
-			color: #{lighten(nth($brand-colors-list, $i), 21%)};
+			color: #{lighten(nth($brand-colors-list, $i), 7%)};
 			&:hover {
 				background: none;
 				border-radius: 0;
@@ -27,9 +27,9 @@ input[type="submit"].btn {
 	@for $i from 1 through length($grayscale-sufix-list) {
 		&.btn-#{nth($grayscale-sufix-list, $i)}.btn-outline {
 			background: none;
-			border: 2px solid #{lighten(nth($grayscale-list, $i), 21%)};
+			border: 2px solid #{lighten(nth($grayscale-list, $i), 7%)};
 			border-radius: 0;
-			color: #{lighten(nth($grayscale-list, $i), 21%)};
+			color: #{lighten(nth($grayscale-list, $i), 7%)};
 			&:hover {
 				background: none;
 				border-radius: 0;

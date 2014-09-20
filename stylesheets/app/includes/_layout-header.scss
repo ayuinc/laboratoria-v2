@@ -1,0 +1,83 @@
+.header {
+	border-bottom: 1px solid darken($brand-primary, 7%);
+	background: $brand-primary;
+	.row {
+		padding: 70px 0;
+		padding: rem(70) 0;
+	}
+	.logo {
+		a {
+			font-size: $font-size-h2;
+			color: white;
+			&:hover {
+				color: darken(white, 14%);
+				text-decoration: none;
+			}
+		}
+	}
+	nav {
+		text-align: right;
+		padding: 7px 0;
+		a {
+			font-size: $font-size-h4;
+			font-size: rem($font-size-h4);
+			color: white;
+			text-transform: uppercase;
+			@include light;
+			padding-left: 21px;
+			padding-left: rem(21);
+			&:hover {
+				text-decoration: none;
+				color: $gray-light;
+			}
+		}
+	}
+	&.on-scroll {
+		position: fixed;
+		width: 100%;
+		z-index: 1000;
+		border-bottom: 1px solid darken(white, 14%);
+		background: white;
+		.row {
+			padding: 14px 0;
+			padding: rem(14) 0;
+		}
+		.logo {
+			a {
+				font-size: $font-size-h3;
+				color: $brand-primary;
+				&:hover {
+					color: darken($brand-primary, 14%);
+				}
+			}
+		}
+		nav {
+			a {
+				padding-left: 18px;
+				padding-left: rem(18);
+				font-size: $font-size-h5;
+				font-size: rem($font-size-h5);
+				color: $gray;
+				&:hover {
+					color: $gray-dark;
+				}
+			}
+		}
+	}
+}
+
+.border-bottom {
+	@include list-unstyled;
+	@include clearfix;
+	li {
+		float: left;
+		width: 20%;
+		height: 3px;
+		$brand-primary-light: lighten($brand-primary, 21%);
+		@for $i from 1 through 5 {
+			&:nth-child(#{$i}) {
+				background-color: adjust-hue($brand-primary, random(100)-1);
+			}
+		}
+	}
+}
