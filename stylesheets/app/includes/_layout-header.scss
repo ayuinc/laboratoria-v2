@@ -1,9 +1,12 @@
 .header {
 	border-bottom: 1px solid darken($brand-primary, 7%);
 	background: $brand-primary;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
 	.row {
-		padding: 70px 0;
-		padding: rem(70) 0;
+		padding: 42px 0;
+		padding: rem(42) 0;
 	}
 	.logo {
 		a {
@@ -60,6 +63,9 @@
 				color: $gray;
 				&:hover {
 					color: $gray-dark;
+				}
+				&.active {
+					color: $brand-primary;
 				}
 			}
 		}
