@@ -19,11 +19,11 @@ $gray:                   lighten($gray-base, 35%) !default; // #555
 $gray-light:             lighten($gray-base, 63%) !default;   // #999
 $gray-lighter:           lighten($gray-base, 77%) !default; // #eee
 
-$brand-primary:         #FB6149 !default;
+$brand-primary:         #FAC60E !default;
 $brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$brand-info:            #5C8A9A !default;
+$brand-warning:         #F68F15 !default;
+$brand-danger:          #FB6149 !default;
 
 $brand-inverse: 				#081A26 !default;
 
@@ -181,6 +181,10 @@ $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-link-disabled-color:        $gray-light !default;
+
+$btn-custom-width: 							 3px !default;
+$btn-custom-width-sm: 					 1px !default;
+$btn-custom-width-lg: 					 5px !default;
 
 
 //== Forms

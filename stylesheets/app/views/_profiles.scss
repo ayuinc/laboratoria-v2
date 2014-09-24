@@ -1,0 +1,22 @@
+#profiles {
+	.grid-list {
+		> li {
+			a {
+				&:hover {
+
+				}
+				img {
+					width: 160px;
+					height: 160px;
+					padding: 5px;
+					background: white;
+					@include box-shadow(0px 1px 1px 0px $gray-light);
+					@media #{$xs-only} {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}

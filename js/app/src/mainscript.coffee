@@ -10,7 +10,7 @@ $(document).ready ->
 		target = this.hash
 		$target = $(target)
 		$(target).velocity 'scroll', {
-			duration: 200,
+			duration: 400,
 			offset: 7
 		}
 		return
@@ -35,14 +35,27 @@ $(document).ready ->
 onScroll = (e) ->	
 	$navSectionRef = $('.smooth-scroll a')
 	$scrollPos = $(document).scrollTop()
-	# console.log $scrollPos
+	#SUPPORT PROGRESS BAR
+	$progressBar = $('.support-progress-bar .bar')
 	$navSectionRef.each ->
     $currLink = $(this)
     $currLinkParent = $currLink.parent()
     $refElement = $($currLink.attr('href'))
     if ($refElement.position().top <= $scrollPos && $refElement.position().top + $refElement.height() > $scrollPos)
       $currLink.addClass 'active'
+	    	if ($refElement.selector == '#nueva-coder')
+	    		$progressBar.velocity({
+	    			width: '350px'
+	    			}, {
+	    				duration: 800
+	    			})
+	    	else 
+	    		$progressBar.css({
+	    			width: '0'
+	    			})
     else
       $currLink.removeClass 'active'
+
+
     return
 	return

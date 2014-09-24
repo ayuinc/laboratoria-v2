@@ -13,7 +13,7 @@
       target = this.hash;
       $target = $(target);
       $(target).velocity('scroll', {
-        duration: 200,
+        duration: 400,
         offset: 7
       });
     });
@@ -32,9 +32,10 @@
   });
 
   onScroll = function(e) {
-    var $navSectionRef, $scrollPos;
+    var $navSectionRef, $progressBar, $scrollPos;
     $navSectionRef = $('.smooth-scroll a');
     $scrollPos = $(document).scrollTop();
+    $progressBar = $('.support-progress-bar .bar');
     $navSectionRef.each(function() {
       var $currLink, $currLinkParent, $refElement;
       $currLink = $(this);
@@ -42,6 +43,17 @@
       $refElement = $($currLink.attr('href'));
       if ($refElement.position().top <= $scrollPos && $refElement.position().top + $refElement.height() > $scrollPos) {
         $currLink.addClass('active');
+        if ($refElement.selector === '#nueva-coder') {
+          $progressBar.velocity({
+            width: '350px'
+          }, {
+            duration: 800
+          });
+        } else {
+          $progressBar.css({
+            width: '0'
+          });
+        }
       } else {
         $currLink.removeClass('active');
       }
