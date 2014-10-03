@@ -2,8 +2,13 @@ $(document).ready ->
 	$sliderFinalWidth = 400
 	$maxQuickWidth = 900
 
+	# Section position
+	$section = $('#profiles')
+	$sectionPos = $section.position()
+
 	# Overlay Close
 	$overlayClose = $('.overlay-close')
+	$overlayClose.css({height: $(document).height()})
 
 	# Profiles Grid
 	$quickviewGrid = $('.quick-view-grid')
@@ -13,15 +18,18 @@ $(document).ready ->
 	$quickviewGridAnchor.on 'click', (e) ->
 		e.preventDefault()
 		selectedItem = $(this)
-		console.log(selectedItem.offset().top)
-		console.log($(window).height())
+		itemImage = selectedItem.find('img').attr('src')
+
+		$('.quick-view .img-wrapper img').attr('src', itemImage)
 		$('body').addClass 'profile-on'
-		animateQuickView(selectedItem, $sliderFinalWidth, $maxQuickWidth, 'open');
+		animateQuickView(selectedItem, $sliderFinalWidth, $maxQuickWidth, 'open')
 		return
 
 	$overlayClose.on 'click', (e) ->
 		e.preventDefault()
+		selectedItem = $(this)
 		$('body').removeClass 'profile-on'
+		animateQuickView(selectedItem, $sliderFinalWidth, $maxQuickWidth, 'close')
 		return
 
 	return #Document Ready
@@ -34,23 +42,38 @@ animateQuickView = (item, finalWidth, maxQuickWidth, animationType) ->
 	heightSelected = item.height()
 	windowWidth = $(window).width()
 	windowHeight = $(window).height()
+	docHeight = $(document).height()
 	finalLeft = (windowWidth - finalWidth)/2
 	finalHeight = finalWidth * heightSelected/widthSelected
 	finalTop = (windowHeight - finalHeight)/2
+	# finalTop = (windowHeight - finalHeight)/2
 	quickViewWidth = ( windowWidth * .8 < maxQuickWidth ) ? windowWidth * .8 : maxQuickWidth
 	quickViewLeft = (windowWidth - quickViewWidth)/2
+
+	console.log(topSelected)
 
 	if (animationType == 'open')
 		parentListItem.addClass 'profile-on'
 		$('.quick-view').css({
-	    "top": topSelected
-	    "left": leftSelected
-	    "width": widthSelected
+	    'top': topSelected
+	    'left': leftSelected
+	    'width': widthSelected
 		}).velocity({
-	    'top': topSelected + 'px'
+	    'top': finalTop + 'px'
 	    'left': finalLeft + 'px'
 	    'width': finalWidth + 'px'
 		}, 1000, [ 400, 20 ]).addClass('is-visible');
+	else 
+		parentListItem.removeClass 'profile-on'
+		$('.quick-view').css({
+	    'top': finalTop + 'px'
+	    'left': finalLeft + 'px'
+	    'width': finalWidth + 'px'
+		}).velocity({
+	    'top': topSelected
+	    'left': leftSelected
+	    'width': widthSelected
+		}, 1000, [ 400, 20 ]).removeClass('is-visible');
 
 	return
 

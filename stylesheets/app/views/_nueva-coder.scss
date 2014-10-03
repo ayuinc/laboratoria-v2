@@ -119,3 +119,133 @@
 		}
 	}
 }
+
+.donations-grid {
+	a {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		&:hover {
+			text-decoration: none;
+			img {
+				@include transform(scale(1.1));
+				@include transition(all 0.2s ease-in-out);
+			}
+			.overlay {
+				div {
+					button {
+						opacity: 1;
+						@include transform(translateY(0));
+						@include transition(all 0.2s ease-in-out);
+					}
+					h3, h4 {
+						@include transform(translateY(-7px));
+						@include transition(all 0.2s ease-in-out);	
+					}
+				}
+			}
+		}
+		img {
+			@include transition(all 0.2s ease-in-out);
+		}
+		.overlay {
+			background: rgba($gray-darker, 0.7);
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			color: white;
+			@include thin;
+			text-align: center;
+			@include display(flex);
+			@include align-items(center);
+  		@include flex-direction(column);
+  		@include justify-content(center);
+  		div {
+  			max-height: 56px;
+  			@include flex(1);
+  			button {
+  				opacity: 0;
+  				@include transform(translateY(100%));
+  				@include transition(all 0.2s ease-in-out);
+  			}
+  			h3, h4 {
+					@include transition(all 0.2s ease-in-out);	
+				}
+  		}
+		}
+	}
+}
+
+.modal-content {
+	overflow: hidden;
+	.close {
+		position: absolute;
+		right: $container-fluid;
+		top: $container-fluid;
+		z-index: 1010;
+	}
+	.overlay {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: $border-radius-base;
+		text-align: center;
+		color: white;
+		@include display(flex);
+		@include align-items(center);
+		@include flex-direction(column);
+		@include justify-content(center);
+		div {
+  		@include flex(1);	
+		}
+	}
+	.overlay-success,
+	.overlay-error {
+		@include transform(translateY(-100%));
+		@include transition(translateY 0.2s ease-in-out);
+		z-index: 1000;
+		div {
+			max-height: 210px;
+		}
+	}
+	.overlay-success {
+		background: $brand-success;
+		@include transition(translateY 0.2s ease-in-out);
+	}
+	.overlay-error {
+		background: $brand-danger;
+		@include transition(translateY 0.2s ease-in-out);
+	}
+	.overlay-on-send {
+		background: rgba(#fff, 0.7);
+		z-index: 900;
+		@include transform(translateY(-100%));
+		@include transition(translateY 0.2s ease-in-out);
+		div {
+			max-height: 70px;
+		}
+	}
+	&.ajax-on-send {
+		.overlay-on-send {
+			@include transform(translateY(0));
+			@include transition(all 0.2s ease-in-out);
+		}
+	}
+	&.ajax-success {
+		.overlay-success {
+			@include transform(translateY(0));
+			@include transition(all 0.2s ease-in-out);
+		}
+	}
+	&.ajax-error {
+		.overlay-error {
+			@include transform(translateY(0));
+			@include transition(all 0.2s ease-in-out);
+		}
+	}
+}

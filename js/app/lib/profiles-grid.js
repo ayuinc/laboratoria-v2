@@ -3,30 +3,38 @@
   var animateQuickView;
 
   $(document).ready(function() {
-    var $maxQuickWidth, $overlayClose, $quickviewGrid, $quickviewGridAnchor, $quickviewGridItem, $sliderFinalWidth;
+    var $maxQuickWidth, $overlayClose, $quickviewGrid, $quickviewGridAnchor, $quickviewGridItem, $section, $sectionPos, $sliderFinalWidth;
     $sliderFinalWidth = 400;
     $maxQuickWidth = 900;
+    $section = $('#profiles');
+    $sectionPos = $section.position();
     $overlayClose = $('.overlay-close');
+    $overlayClose.css({
+      height: $(document).height()
+    });
     $quickviewGrid = $('.quick-view-grid');
     $quickviewGridItem = $('li', $quickviewGrid);
     $quickviewGridAnchor = $('a', $quickviewGridItem);
     $quickviewGridAnchor.on('click', function(e) {
-      var selectedItem;
+      var itemImage, selectedItem;
       e.preventDefault();
       selectedItem = $(this);
-      console.log(selectedItem.offset().top);
-      console.log($(window).height());
+      itemImage = selectedItem.find('img').attr('src');
+      $('.quick-view .img-wrapper img').attr('src', itemImage);
       $('body').addClass('profile-on');
       animateQuickView(selectedItem, $sliderFinalWidth, $maxQuickWidth, 'open');
     });
     $overlayClose.on('click', function(e) {
+      var selectedItem;
       e.preventDefault();
+      selectedItem = $(this);
       $('body').removeClass('profile-on');
+      animateQuickView(selectedItem, $sliderFinalWidth, $maxQuickWidth, 'close');
     });
   });
 
   animateQuickView = function(item, finalWidth, maxQuickWidth, animationType) {
-    var finalHeight, finalLeft, finalTop, heightSelected, leftSelected, parentListItem, quickViewLeft, quickViewWidth, topSelected, widthSelected, windowHeight, windowWidth, _ref;
+    var docHeight, finalHeight, finalLeft, finalTop, heightSelected, leftSelected, parentListItem, quickViewLeft, quickViewWidth, topSelected, widthSelected, windowHeight, windowWidth, _ref;
     parentListItem = item.parents('.item');
     topSelected = item.offset().top;
     leftSelected = item.offset().left;
@@ -34,6 +42,7 @@
     heightSelected = item.height();
     windowWidth = $(window).width();
     windowHeight = $(window).height();
+    docHeight = $(document).height();
     finalLeft = (windowWidth - finalWidth) / 2;
     finalHeight = finalWidth * heightSelected / widthSelected;
     finalTop = (windowHeight - finalHeight) / 2;
@@ -41,17 +50,29 @@
       .8: maxQuickWidth
     };
     quickViewLeft = (windowWidth - quickViewWidth) / 2;
+    console.log(topSelected);
     if (animationType === 'open') {
       parentListItem.addClass('profile-on');
       $('.quick-view').css({
-        "top": topSelected,
-        "left": leftSelected,
-        "width": widthSelected
+        'top': topSelected,
+        'left': leftSelected,
+        'width': widthSelected
       }).velocity({
-        'top': topSelected + 'px',
+        'top': finalTop + 'px',
         'left': finalLeft + 'px',
         'width': finalWidth + 'px'
       }, 1000, [400, 20]).addClass('is-visible');
+    } else {
+      parentListItem.removeClass('profile-on');
+      $('.quick-view').css({
+        'top': finalTop + 'px',
+        'left': finalLeft + 'px',
+        'width': finalWidth + 'px'
+      }).velocity({
+        'top': topSelected,
+        'left': leftSelected,
+        'width': widthSelected
+      }, 1000, [400, 20]).removeClass('is-visible');
     }
   };
 

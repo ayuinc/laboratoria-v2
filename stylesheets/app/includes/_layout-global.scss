@@ -7,14 +7,14 @@ body {
 	}
 }
 
-.site-wrapper,
-.site-content {
+.site-wrapper {
 	min-height: 100%;
 	height: 100%;
 	position: relative;
 }
 
 .site-content {
+	position: relative;
 	div[id] {
 		padding: 91px 0;
 		padding: rem(91) 0;
@@ -74,14 +74,14 @@ body {
 		border-radius: 50%;
 		margin: 0 7px;
 		&:first-child {
-			background: rgba($brand-primary, 0.3);
+			background: rgba($brand-primary, 0.9);
 		}
 		&:nth-child(2) {
 			padding: 6px;
-			background: rgba(darken($brand-primary, 7%), 0.3);
+			background: rgba(darken($brand-primary, 7%), 0.9);
 		}
 		&:last-child {
-			background: rgba($brand-primary, 0.3);
+			background: rgba($brand-primary, 0.9);
 		}
 	}
 }
