@@ -10,7 +10,9 @@ html {
 }
 
 // MAIN TEXT
-
+html {
+  -webkit-font-smoothing: antialiased;
+}
 
 // TEXT IN REMS
 h1, .h1 { font-size: rem($font-size-h1); }

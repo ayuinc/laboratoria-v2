@@ -1,22 +1,35 @@
 .header {
 	border-bottom: 1px solid darken($brand-primary, 7%);
-	background: rgba($brand-primary, 0.7);
+	background: rgba($brand-primary, 0.9);
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
 	height: 102px;
+	@media #{$xs-only} {
+		height: 70px;
+	}
 	@include transition(height 0.2s ease-in-out);
+	.border-bottom {
+		display: none;
+	}
 	.row {
 		padding: 28px 0;
 		padding: rem(28) 0;
+		@media #{$xs-only} {
+			padding: 14px 0;
+			padding: rem(14) 0;
+		}
 	}
 	.logo {
+		@media #{$xs-only} {
+			text-align: center;
+		}
 		a {
 			font-size: $font-size-h2;
 			color: white;
 			@include transition(all 0.2s ease-in-out);
 			&:hover {
-				color: darken(white, 14%);
+				color: darken($brand-primary, 14%);
 				text-decoration: none;
 			}
 		}
@@ -35,7 +48,7 @@
 			@include transition(all 0.2s ease-in-out);
 			&:hover {
 				text-decoration: none;
-				color: $brand-primary;
+				color: $gray-darker;
 			}
 		}
 	}
@@ -76,6 +89,9 @@
 					color: $brand-primary;
 				}
 			}
+		}
+		.border-bottom {
+			display: block;
 		}
 	}
 }

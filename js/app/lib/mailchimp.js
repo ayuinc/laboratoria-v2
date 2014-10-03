@@ -3,7 +3,7 @@
   var register, resetFields;
 
   $(document).ready(function() {
-    var $donateTriggers, $form;
+    var $donateTriggers, $form, runForm;
     $donateTriggers = $('.donations-grid .donate-trigger');
     $form = $('.form-mailchimp');
     $donateTriggers.click(function(e) {
@@ -13,45 +13,47 @@
       $dataTarget = $(this).data('target');
       $thisModal = $($dataTarget);
       $thisModal.modal('show');
+      runForm($dataTarget);
     });
-    $form.bootstrapValidator({
-      submitButtons: 'button[type="submit"]',
-      fields: {
-        EMAIL: {
-          validators: {
-            notEmpty: {
-              message: 'Por favor completa este campo'
-            },
-            emailAddress: {
-              message: 'Introduce un correo electrónico válido'
+    runForm = function($dataTarget) {
+      $form.bootstrapValidator({
+        submitButtons: 'button[type="submit"]',
+        fields: {
+          EMAIL: {
+            validators: {
+              notEmpty: {
+                message: 'Por favor completa este campo'
+              },
+              emailAddress: {
+                message: 'Introduce un correo electrónico válido'
+              }
             }
-          }
-        },
-        FNAME: {
-          validators: {
-            notEmpty: {
-              message: 'Por favor completa este campo'
+          },
+          FNAME: {
+            validators: {
+              notEmpty: {
+                message: 'Por favor completa este campo'
+              }
             }
           }
         }
-      }
-    }).on('success.form.bv', function(e) {
-      var $data, $this;
-      e.preventDefault();
-      $form.parent().parent().addClass('ajax-on-send');
-      $this = $(this);
-      console.log($this);
-      $data = {
-        username: $this.find('input[name="username"]').val(),
-        dc: $this.find('input[name="dc"]').val(),
-        u: $this.find('input[name="u"]').val(),
-        id: $this.find('input[name="id"]').val()
-      };
-      register($this, $data);
-    });
+      }).on('success.form.bv', function(e) {
+        var $data, $this;
+        e.preventDefault();
+        $form.parent().parent().addClass('ajax-on-send');
+        $this = $(this);
+        $data = {
+          username: $this.find('input[name="username"]').val(),
+          dc: $this.find('input[name="dc"]').val(),
+          u: $this.find('input[name="u"]').val(),
+          id: $this.find('input[name="id"]').val()
+        };
+        register($this, $data, $dataTarget);
+      });
+    };
   });
 
-  register = function($form, $data) {
+  register = function($form, $data, $dataTarget) {
     var $modalContent;
     $modalContent = $form.parent().parent();
     $.ajax({
@@ -68,9 +70,16 @@
       },
       success: function(data) {
         if (data.result !== "success") {
-          return $modalContent.addClass('ajax-error');
+          $modalContent.addClass('ajax-error');
+          return console.log(data);
         } else {
-          $modalContent.addClass('ajax-success');
+          console.log(data);
+          if ($dataTarget === '#modal-beca') {
+            console.log($dataTarget);
+            console.log('redirecting');
+          } else {
+            $modalContent.addClass('ajax-success');
+          }
           $form.find('input[name="EMAIL"]').val('');
           $form.find('input[name="FNAME"]').val('');
           $form.find('input[name="LNAME"]').val('');

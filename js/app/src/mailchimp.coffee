@@ -6,49 +6,53 @@ $(document).ready ->
     e.preventDefault()
     resetFields()
     $dataTarget = $(this).data('target')
-    $thisModal = $($dataTarget)    
+    $thisModal = $($dataTarget)
     $thisModal.modal 'show'
+    runForm($dataTarget)
     return
     
-  $form.bootstrapValidator({
-    submitButtons: 'button[type="submit"]'
-    fields: {
-      EMAIL: {
-        validators: {
-          notEmpty: {
-            message: 'Por favor completa este campo'
-          }
-          emailAddress: {
-            message: 'Introduce un correo electrónico válido'
+  runForm = ($dataTarget) ->
+    $form.bootstrapValidator({
+      submitButtons: 'button[type="submit"]'
+      fields: {
+        EMAIL: {
+          validators: {
+            notEmpty: {
+              message: 'Por favor completa este campo'
+            }
+            emailAddress: {
+              message: 'Introduce un correo electrónico válido'
+            }
           }
         }
-      }
-      FNAME: {
-        validators: {
-          notEmpty: {
-            message: 'Por favor completa este campo'
-          }
-        } 
-      }
-    }
-    })
-      .on 'success.form.bv', (e) ->
-        e.preventDefault()
-        $form.parent().parent().addClass 'ajax-on-send'
-        $this = $(this)
-        console.log $this
-        $data = {
-          username: $this.find('input[name="username"]').val()
-          dc: $this.find('input[name="dc"]').val()
-          u: $this.find('input[name="u"]').val()
-          id: $this.find('input[name="id"]').val()
+        FNAME: {
+          validators: {
+            notEmpty: {
+              message: 'Por favor completa este campo'
+            }
+          } 
         }
-        # console.log $data
-        register($this, $data)
-        return
+      }
+      })
+        .on 'success.form.bv', (e) ->
+          e.preventDefault()
+          $form.parent().parent().addClass 'ajax-on-send'
+          $this = $(this)
+          # console.log $this
+          $data = {
+            username: $this.find('input[name="username"]').val()
+            dc: $this.find('input[name="dc"]').val()
+            u: $this.find('input[name="u"]').val()
+            id: $this.find('input[name="id"]').val()
+          }
+          # console.log $data
+          # REGISTER & SEND TO PAYPAL
+          register($this, $data, $dataTarget)
+          return
+    return
   return
 
-register = ($form, $data)->
+register = ($form, $data, $dataTarget) ->
   $modalContent = $form.parent().parent()
   $.ajax({
     type: $form.attr('method')
@@ -65,10 +69,14 @@ register = ($form, $data)->
     success: (data) -> 
       if (data.result != "success") 
         $modalContent.addClass 'ajax-error'
-        # console.log data
+        console.log data
       else 
-        # console.log $data
-        $modalContent.addClass 'ajax-success'
+        console.log data
+        if ($dataTarget == '#modal-beca')
+          console.log($dataTarget)
+          console.log('redirecting')
+        else 
+          $modalContent.addClass 'ajax-success'
         $form.find('input[name="EMAIL"]').val('')
         $form.find('input[name="FNAME"]').val('')
         $form.find('input[name="LNAME"]').val('')
