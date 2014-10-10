@@ -6,6 +6,12 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 // Variables
 // --------------------------------------------------
 
+// LIST UNSTYLED
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
 
 //== Colors
 //

@@ -1,8 +1,8 @@
 html,
 body {
-	min-height: 100%;
-	height: 100%;
 	@media #{$md-up} {
+		min-height: 100%;
+		height: 100%;
 		&::-webkit-scrollbar { 
 	    display: none; 
 		}
@@ -23,6 +23,10 @@ body {
 		position: relative;
 		border-top: 1px solid darken(white, 3%);
 		border-bottom: 1px solid darken(white, 3%);
+	}
+	@media #{$md-up} {
+		min-height: 100%;
+		height: 100%;
 	}
 }
 

@@ -1,13 +1,16 @@
 // GRID LISTS
 ul.grid-list {
 	@include clearfix;
-	margin-left: -($grid-gutter-width / 2);
-	margin-right: -($grid-gutter-width / 2);
+	// margin-left: -($grid-gutter-width / 2);
+	// margin-right: -($grid-gutter-width / 2);
 	padding: 0;
+	margin: 0;
+	@include list-unstyled;
 	> li {
 		float: left;
 		padding: $grid-gutter-width / 2;
 		padding: rem($grid-gutter-width / 2);
+		min-height: 140px;
 	}
 	@for $i from 1 through 12 {
 		&.grid-list-#{$i} {
@@ -25,6 +28,23 @@ ul.grid-list {
 		> li {
 			float: none;
 			display: inline-block;
+		}
+	}
+	&.grid-list-right {
+		text-align: right;
+		> li {
+			float: none;
+			display: inline-block;
+		}
+	}
+	&.grid-list-anchors {
+		> li {
+			a {
+				display: block;
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
