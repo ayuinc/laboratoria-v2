@@ -6,6 +6,9 @@
     var $navSectionRef, $sectionNav, getDocHeight;
     $sectionNav = $('.header');
     $navSectionRef = $('.smooth-scroll a');
+    $('.disable-anchors a').click(function(e) {
+      e.preventDefault();
+    });
     $(document).on('scroll', onScroll);
     $navSectionRef.on('click', function(e) {
       var $target, target;
