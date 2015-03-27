@@ -1,0 +1,171 @@
+/*GLOBAL*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* END:GLOBAL*/
+
+body {
+	font-family: sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.9px; 
+}
+
+/*REUTILIZABLE*/
+
+.p-0 {
+	padding: 0!important;
+}
+
+.relative {
+	position: relative;
+}
+
+/*END: REUTILIZABLE*/
+
+body {
+	background-image: url(../img/claro.jpg);
+	background-repeat: no-repeat;
+	position: relative;
+	background-size: cover; 
+}
+
+.container {
+	margin: 56px  auto;
+	width: 560px;
+	height: 560px;
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 3px 3px 3px rgba(0,0,0,3);
+}
+
+#cover {
+	background: url(../img/pais_1.jpg) no-repeat center center;
+	background-size: cover;
+	height: 210px;
+	position: relative;
+}
+
+#cover .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#cover a.overlay:hover {
+    background: rgba(0,0,0,0.5);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#cover .data-anim {
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#cover a.overlay:hover .data-anim {
+	padding-left: 0;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#cover .name {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	color: white;
+}
+
+#profile .profile-pic {
+	position: absolute;
+	width: 160px;
+	height: 180px;
+	border-radius: 130%;
+	top: -102px;
+	padding: 3px;
+	background: #B092FF;
+}
+
+#profile .relative {
+	height: 110px;
+}
+
+#profile .bio p, #profile .email {
+	font-size: 11px;
+	margin: 7px 0;
+	line-height: 16px;
+	letter-spacing: 0.9px;
+}
+
+#profile .bio a, #profile.email {
+	text-decoration: none;
+	color: gray;
+}
+
+#profile .portafolio {
+	padding-top: 21px;
+}
+
+#profile .portafolio ul.list-unstyled {
+	list-style-type: none;
+	padding-top: 21px;
+}
+
+#profile .portafolio ul.list-unstyled li{
+	float: left;
+	width: 49.5%;
+	margin-bottom: 14px;
+}
+
+#profile .portafolio ul.list-unstyled li:nth-child(even) {
+	padding: 0 0 0 7px;
+}
+
+#profile .portafolio ul.list-unstyled li:nth-child(odd) {
+	padding: 0 7px 0 0;
+}
+
+#profile .portafolio ul.list-unstyled li a {
+	display: block;
+	border-radius: 3px;
+	min-width: 166px;
+	min-height: 164px;
+	box-shadow: 0px 2px 2px 2px whitesmoke;
+	color: gray;
+    text-decoration: none;
+}
+
+#profile .portafolio ul.list-unstyled li a img {
+	width: 100%;
+	height: auto;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+#profile .portafolio ul.list-unstyled li a .portafolio-img {
+	height: 112px;
+	overflow: hidden;
+}
+
+#profile .portafolio ul.list-unstyled li a .portafolio-name {
+	padding: 7px;
+}
+
+#profile .portafolio ul.list-unstyled li a .portafolio-name span {
+	font-size: 12px;
+}
+
+#profile .portafolio ul.list-unstyled li a .portafolio-name small {
+	font-size: 9px;
+}

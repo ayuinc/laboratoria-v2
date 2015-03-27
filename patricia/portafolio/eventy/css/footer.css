@@ -1,0 +1,49 @@
+footer {
+	background: black;
+	opacity: 0.7;
+	width: 100%;
+	color: white;
+	z-index: 10;
+	margin-top: 0px;
+	padding: 40px 20px 21px 20px;
+}
+
+footer .row img {
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+}
+
+footer .row .col-md-6 img {
+	width: 215px;
+	height: 36px;
+}
+
+footer .row .col-md-12 {
+	color: gray;
+	font-size: 100%;
+	border-top: 1px dashed #2bde73;
+}
+
+.list {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.aprenda-mas {
+	top: -75px;
+	text-align: center;
+	width: 100%;
+}
+
+h4 {
+	display: inline-block;
+	padding: 14px 21px;
+	border-radius: 5px;
+	background: aqua;
+	color: black;
+}
+
+h6 {
+	padding: 8px;
+}

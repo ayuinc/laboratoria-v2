@@ -1,0 +1,81 @@
+.container {
+	min-height: 700px;
+}
+
+.spider-box {
+	width: 210px;
+	height: 210px;
+	border: 3px solid gray;
+	position: absolute;
+	top: 30%;
+	left: 38%;
+}
+
+.spider-box ul {
+	position: relative;
+	list-style: none;
+	width: 210px;
+	height: 210px;
+	padding: 0;
+	margin: 0;
+}
+
+.spider-box ul li {
+	position: absolute;
+	border-radius: 50%;
+}
+
+.spider-box ul li:nth-child(n-4) {
+	background-color: purple;
+	width: 35px;
+	height: 35px;
+}
+
+.spider-box ul li:nth-child(n+5) {
+	background-color: red;
+	width: 21px;
+	height: 21px;
+}
+
+.spider-box ul li:nth-child(1) {
+	top: 0;
+	left: 0;
+}
+
+.spider-box ul li:nth-child(2) {
+	top: 0;
+	right: 0;
+}
+
+.spider-box ul li:nth-child(3) {
+	bottom: 0;
+	left: 0;
+}
+
+.spider-box ul li:nth-child(4) {
+	bottom: 0;
+	right: 0;
+}
+
+.spider-box ul li:nth-child(5) {
+	top: -21px;
+	left: -21px;
+}
+
+.spider-box ul li:nth-child(6) {
+	top: -21px;
+	right: -21px;
+}
+
+.spider-box ul li:nth-child(7) {
+	bottom: -21px;
+	left: -21px;
+}
+
+.spider-box ul li:nth-child(8) {
+	bottom: -21px;
+	right: -21px;
+}
+
+
+

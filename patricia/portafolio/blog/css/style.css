@@ -1,0 +1,157 @@
+/* GLOBAL */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* END:GLOBAL */
+
+body {
+	font-family: 'Raleway', sans-serif;	
+	font-weight: 200;
+	letter-spacing: 0.9px;
+}
+
+/* REUTILIZABLES */
+.p-0 {
+	padding: 0 !important;
+}
+
+/* END: REUTILIZABLES; */
+
+/* HEADER */
+header {
+	background: rgba(250, 28, 68, 0.2);
+	padding: 21px !important;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+
+header .logo span:nth-child(1) {
+	color: yellow;
+}
+
+header .logo span:nth-child(2) {
+	color: green;
+}
+
+header .logo span:nth-child(3) {
+	color: red;
+}
+
+header .logo span:nth-child(4) {
+	color: white;
+}
+
+header nav {
+	text-align: right;
+}
+
+header nav a {
+	color: #fff;
+	padding: 0 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+/* FOLD */
+#fold {
+	background-image: url(../img/paisaje.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 630px;
+	position: relative;
+} 
+
+#fold .fold-title {
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	width: 100%;
+	color: white;
+	text-transform: uppercase;
+}
+
+#fold .fold-title h1 {
+	margin-bottom: 42px;
+	font-weight: 400;
+}
+
+#fold .fold-title a {
+	text-decoration: none;
+	color: white;
+	padding: 14px 21px;
+	background: #77B59C;
+	border-radius: 3px;
+}
+
+#fold .fold-title a:hover {
+	background: #45C18F;
+}
+
+/*articulo*/
+
+article {
+	min-height: 630px;
+	position: relative;
+	border-radius: 5px;
+}
+
+article .content-wrapper {
+	width: 100%;
+	position: absolute;
+	top: -70px;
+	background: rgba(65, 65, 65, 0.4);
+}
+
+article .content-wrapper h3 {
+	text-transform: capitalize;
+}
+
+article .content-wrapper .subcontainer {
+	width: 700px;
+	margin: 0 auto;
+	background: white;
+	min-height: 600px;
+	padding: 14px; 
+	border-radius: 5px;
+}
+
+.teaser {
+
+}
+
+p {
+
+}
+
+article p {}
+
+article blockquote:before {
+	content: '"';
+	display: block;
+	position: absolute;
+	font-size: 140px;
+	font-style: italic;
+	color: rgba(235,235,235);
+	top: 29px;
+	left: 5px;
+	opacity: -4;
+	font-family: 'Crimson text', serif;
+	font-style: italic;
+
+}
+
+footer {
+	text-align: center;
+	min-height: 70px;
+}
+
+
+
+
+
+

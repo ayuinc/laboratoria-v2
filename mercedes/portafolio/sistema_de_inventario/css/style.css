@@ -1,0 +1,169 @@
+/* GLOBAL */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* END:GLOBAL */
+
+body {
+	background: #E1E3E6;
+	padding: 14px 0 70px 0;
+	font-family: sans-serif;
+	font-weight: 300;
+}
+
+/* CONTENEDOR */
+.container {
+	width: 960px;
+	min-height: 640px;
+	margin: 0 auto;
+	background: white;
+	padding: 14px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px #7D7E80;
+}
+
+/* Clases reutilizables */
+.text-center {
+	text-align: center;
+}
+
+.img-circle,
+.img-border {
+	width: 140px;
+	height: auto;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+.img-border {
+	border-radius: 5px;
+}
+
+.p-0 {
+	padding: 0 !important;
+}
+
+/* BARRA DE NAVEGACION */
+.logo {
+	text-align: center;
+	padding: 11px;
+}
+
+.nav {
+	height: 42px;
+	background: tomato;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.nav a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	height: 42px;
+	padding: 12px 0;
+}
+
+.nav a:hover,
+.nav a:active {
+	background: rgb(230, 7, 7);
+	border-radius: 3px;
+}
+
+.login a {
+	display: block;
+	padding: 11px 7px;
+	border: 2px solid tomato;
+	text-align: center;
+	text-decoration: none;
+	color: tomato;
+	height: 42px;
+	border-radius: 3px;
+}
+
+form fieldset label img {
+	width: 27px;
+}
+
+#cover {
+  background: url(../img/capturada12.jpg) no-repeat center center;
+  background-size: cover;
+  height: 210px;
+  position: relative;
+}
+
+#cover a.overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.2);
+}
+
+#cover .data-anim {
+  -webkit-transition: all 0.3s ease;
+  -moz-tranition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#cover a.overlay:hover {
+  background: rgba(0,0,0,0.4);
+  -webkit-transition: all 0.3s ease;
+  -moz-tranition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#cover a.overlay:hover .data-anim {
+  padding-left: 0; 
+  -webkit-transition: all 0.3s ease;
+  -moz-tranition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#cover .name {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: white;
+}
+
+#profile .profile-pic {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  border-radius: 50%;
+  padding: 4px;
+  top: -77px;
+  background: white; 
+}
+
+#portada .col-12 {
+	background-color: #F27E92;
+	height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

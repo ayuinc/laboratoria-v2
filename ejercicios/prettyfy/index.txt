@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Prettyfy: Un ejercicio en Laboratoria</title>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#favourites">Favourites</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="banner">
+    <img class="logo" src="images/logo.png">
+    <h1>Your name here</h1>
+    <p>Your tagline here</p>
+  </div>
+  <div id="about" class="about box">
+    <h2>About Me</h2>
+    <img class="profile" src="images/profile.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero voluptate eligendi quae impedit quos quia esse error mollitia velit. Necessitatibus distinctio a quis expedita ipsam ad facere natus nemo.</p>
+  </div>
+  <div id="favourites" class="favourites box">
+    <h2>My Favourite Things</h2>
+    <h3>Here are a few things I really love</h3>
+    <img class="favourite" src="images/kitten.jpg">
+    <img class="favourite" src="images/kitten.jpg">
+    <img class="favourite" src="images/kitten.jpg">
+    <img class="favourite" src="images/kitten.jpg">
+  </div>
+  <div id="contact" class="contact box">
+    <h2>Contact Me</h2>
+    <a href="#"><img src="images/twitter.png"></a>
+    <a href="#"><img src="images/facebook.png"></a>
+    <a href="#"><img src="images/linkedin.png"></a>
+  </div>
+</body>
+</html>

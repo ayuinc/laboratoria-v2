@@ -1,0 +1,133 @@
+* {
+	box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+body{
+	margin:0;
+}
+
+.container	{
+	width:100%;
+	min-height: 100%;
+	font-family: "Courier New";
+	font-size: 18px;
+}
+
+.upper	{
+	width:100%;
+	height: 100%;
+	background-image: url(../assets/fotolaboratoria.jpg);
+	margin:0 auto; 
+}
+
+.lower {
+	width: 100%;
+	padding: 70px 0;
+	margin:0 auto;
+}
+
+.footer{
+	height: 80px;
+	background-color: #323230;
+	padding: 10px;
+}
+
+.navigation{
+	width: 33%;
+	position: absolute;
+	top: 10%;
+	right:1%;
+	text-align: center;
+}
+
+ul.list li{
+	display: inline-block;
+	padding-left: 30px;
+}
+
+ul.list{
+	margin:0;
+	padding:0;
+}
+
+.center{
+	width: 33%;
+	margin:auto;
+	position: relative;
+	top: 15%;
+}
+
+.center img{
+	width: 100%;
+}
+
+.button{
+	width: 7.5%;
+	position: fixed;
+	top: 7.5%;
+	left:5%;
+	text-align: center;
+	background-color: #FCB739;
+	border-radius: 3%;
+	padding: 14px;
+	margin-left: 40px;
+}
+
+.lower li{
+	list-style: none;
+	width: 33%;
+	float: left;
+	padding: 40px;
+}
+
+.lower img{
+	width: 100%;
+}
+
+.lower ul{
+	padding: 0px;
+	margin:0 5%;
+}
+
+.titulo{
+	text-align: left;
+	margin: 20px 0px;
+	border-bottom: 1px solid #323230;
+}
+
+.titulo span{
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+.button	span{
+	color: #323230;
+	font-weight: 500;
+}
+
+p{
+	color: white;
+	margin-left: 103px;
+}
+
+
+
+
+
+
+
+
+

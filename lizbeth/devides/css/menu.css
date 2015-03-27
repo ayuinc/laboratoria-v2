@@ -1,0 +1,57 @@
+.fixed-menu	{
+	width: 222px;
+	position: fixed;
+	top: 14px;
+	left: 14px;
+	z-index: 1000;
+}
+
+.fixed-menu .logo {
+	padding: 21px 18px;
+	width: 222px;
+	height: 91px;
+	background: white;
+	overflow: hidden;
+}
+
+.fixed-menu .logo h1 {
+	margin: 0;
+	line-height: 28px;
+}
+
+.fixed-menu .logo h1.espacio {
+	text-align: right;
+	color: rgb(0, 255, 123);
+}
+
+.fixed-menu .toggle {
+	display: block;
+	background: white;
+	text-align: center;
+	text-transform: uppercase;
+	color: gray;
+	font-size: 10px;
+}
+
+.fixed-menu .navigation {
+	background: white;
+	padding: 24px 18px;
+	border-top: 1px solid aliceblue;
+}
+
+.fixed-menu .navigation ul li:first-child {
+	text-transform: uppercase;
+	padding: 0;
+}
+
+.fixed-menu .navigation ul li:first-child a {
+	color: #65686A;
+}
+
+.fixed-menu .navigation ul li:nth-child(n+2) {
+	padding: 3px 0 0 14px;
+}
+
+.fixed-menu .navigation ul li:nth-child(n+2) a {
+	color: black;
+}

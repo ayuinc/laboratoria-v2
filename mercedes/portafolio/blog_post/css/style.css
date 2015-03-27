@@ -1,0 +1,113 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* END:GLOBAL */
+
+body {
+  font-weight: 200;
+  letter-spacing: 0.9;
+  font-family: 'Raleway', sans-serif;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+header {
+  padding: 21px !important;
+  background: rgba(255,255,255,0.3);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+header nav {
+  text-align: right;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #191919;
+  text-transform: uppercase;
+  padding: 0 14px;
+}
+
+/*FOLD*/
+#fold {
+  background-image: url(../img/surf.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 630px;
+  position: relative;
+}
+
+#fold .fold-title {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  font-family:'Special Elite', cursive;
+  color: #39484A;
+  text-transform: uppercase;
+}
+
+#fold .fold-title h1 {
+  margin-bottom: 42px;
+}
+
+#fold .fold-title a {
+  text-decoration: none;
+  color: gray;
+  padding: 14px 21px;
+  background: #AAD9E8;
+  border-radius: 3px;
+}
+
+#fold .fold-title a:hover {
+  background: #9FCBD9;
+}
+
+/* ARTÍCULO */
+article {
+  min-height: 630px;
+  position: relative;
+
+}
+
+article .content-wrapper {
+  width: 100%;
+  position: absolute;
+  top: -70px;
+}
+
+article .content-wrapper h3 {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+article .content-wrapper .sub-container {
+  width: 700px;
+  margin: 0px auto;
+  background: #F0E9F3;
+  min-height: 600px;
+  padding: 14px;
+  border-radius: 7px;
+}
+
+article .content-wrapper .sub-container h3 {
+  color: #3E3E40;
+  font-family: 'Kreon', serif;
+}
+
+article p {
+  color: #5C5C5C;
+  font-family: 'Kreon', serif;
+  padding: 21px;
+}
+

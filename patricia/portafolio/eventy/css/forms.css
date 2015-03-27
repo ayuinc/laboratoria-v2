@@ -1,0 +1,165 @@
+* {
+	color: black;
+}
+
+body {
+	background-image: url(../img/portada.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* ESTILOS PARA EL FORMULARIO */
+form {
+	margin: 0 auto;
+	font-family:'Montserrat', sans-serif;
+	width: 450px;
+	min-height: 420px;
+	border-radius: 5px;
+	padding: 14px;
+	background: whitesmoke;
+	box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+}
+
+.container-login {
+	margin-top: 150px;
+	width: 450px;
+	min-height: 231px;
+	padding: 20px;
+	background: honeydew;;
+	opacity: 0.9;
+	box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+}
+
+.container-registrate {
+	margin-top: 40px;
+	width: 450px;
+	min-height: 231px;
+	padding: 20px;
+	background: honeydew;;
+	opacity: 0.9;
+	box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+}
+
+#fold-login form fieldset {
+	padding: 14px;
+	border-bottom: 1px solid rgb(221, 218, 218);
+}
+
+#fold-registrate form fieldset {
+	padding: 5px;
+}
+
+form fieldset label {
+	display: block;
+	padding: 7px 0;
+}
+
+form fieldset input[type="text"],
+form fieldset input[type="email"],
+form fieldset input[type="password"], 
+form fieldset input[type="empresa"],
+form fieldset input[type="web"] {
+	border-radius: 3px;
+	padding: 7px;
+	width: 100%;
+}
+
+form input[type="submit"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: block;
+	width: 100%;
+	height: 28px;
+	margin-top: 14px;
+	background: -webkit-linear-gradient(bottom, #31bc86 25%, rgb(129,208,177) 75%);
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.3);
+	color: white;
+	font-size: 16px;
+}
+
+/* CAMBIAR COLOR DE ASTERISCO */
+form fieldset label sup {
+	color: red;
+}
+
+/* ICONO DE TWITTER */
+form fieldset label img {
+	width: 21px;
+	height: auto;
+}
+
+h3 {
+	text-align: center;
+	color: #FD2800;
+}
+
+.btn-danger:hover {
+	color: white;
+	background-color: #FD2800;
+	border-color: #ac2925;
+	text-align: center;
+	display: block;
+}
+
+.btn {
+	margin: 10px 150px;
+}
+
+select {
+	display: block;
+	width: 100%;
+	height: 34px;
+	/*padding: 6px 12px; para que se noten todas las letras*/
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #898b8e;
+	background-color: white;
+	background-image: none;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.form-login {
+	margin-bottom: 20px;
+	color: black;
+}
+
+#fold-login .container form a {
+	display: block;
+	text-align: center;
+	margin: 10px;
+}
+
+h6 {
+	text-align: center;
+}
+
+#fold-compra form fieldset {
+	padding: 14px;
+	border-bottom: 1px solid rgb(221, 218, 218);
+}
+
+#fold-compra .container form a {
+	display: block;
+	text-align: center;
+	margin: 10px;
+}
+
+.container-compra {
+	margin-top: 35px;
+	width: 450px;
+	min-height: 231px;
+	padding: 20px;
+	background: honeydew;;
+	opacity: 0.9;
+	box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+}

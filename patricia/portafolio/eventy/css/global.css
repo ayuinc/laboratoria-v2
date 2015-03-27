@@ -1,0 +1,35 @@
+/* GLOBAL */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* END:GLOBAL */
+
+/* GLOBAL */
+.p-0 {
+	padding: 0 !important;
+}
+
+body {
+	letter-spacing: 0.9px;
+	font-weight: 200;
+}
+
+section h1.section-heading {
+	text-align: center;
+	color: steelblue;
+	font-family: 'Open Sans', sans-serif;
+	padding-bottom: 10px;
+	font-size: 49px;
+}
+
+.btn.btn-custom {
+	background: #FD2800;
+	color: white;
+}
+
+.btn.btn-custom:hover {
+	background: blue;
+}

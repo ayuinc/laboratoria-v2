@@ -1,0 +1,51 @@
+#### Clases Auxiliares
+
+Estas clases se pueden usar en el `html`: 
+
+##### Backgrounds:
+
+- bg-white
+- bg-primary
+- bg-info
+- bg-success
+- bg-danger
+- bg-warning
+
+##### Texto:
+
+Colores:
+
+- text-muted (Color blanco o gris muy claro)
+- text-primary
+- text-info
+- text-success
+- text-danger
+- text-warning
+
+Alineaciones:
+
+- text-center
+- text-right
+- text-justify
+
+##### Alturas mínimas:
+
+Escalas de 7 x 10
+
+- mh-70
+- mh-140
+- mh-210
+- mh-280
+- mh-350
+- mh-420
+- mh-490
+- mh-560
+
+#### Columnas:
+
+El `*` asterisco representa números del 1 al 12
+
+- col-xs-* 
+- col-sm-*
+- col-md-*
+- col-lg-*

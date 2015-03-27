@@ -1,0 +1,83 @@
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.img-slider-modal {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 1000;
+	padding: 14px;
+	height: 100%;
+}
+
+.img-slider-modal a.close {
+	position: absolute;
+	top: 21px;
+	right: 21px;
+	color: white;
+	font-size: 28px;
+	text-transform: uppercase;
+	z-index: 49;
+	color: gray;
+}
+
+.img-slider-modal a.close:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.img-slider-modal .wrapper {
+	position: relative;
+	text-align: center;
+	height: 100%;
+}
+
+.img-slider-modal .wrapper ul.img-slider-container {
+	position: relative;
+}
+
+.img-slider-modal .wrapper ul.img-slider-container li {
+	position: absolute;
+}
+
+.img-slider-modal .wrapper ul.img-slider-container li img {
+	width: 77%;
+	height: auto;
+}
+
+.img-slider-modal .wrapper ul.img-slider-container li:first-child {
+	z-index: 30;
+}
+
+.img-slider-modal .img-slider-control {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: table;
+	height: 100%;
+	z-index: 42;
+}
+
+.img-slider-modal .img-slider-control.left {
+	left: 0;
+}
+
+.img-slider-modal .img-slider-control.right {
+	right: 0;
+}
+
+.img-slider-modal .img-slider-control a {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 28px;
+	color: gray;
+}
+
+.img-slider-modal .img-slider-control a:hover {
+	text-decoration: none;
+	color: white;
+}

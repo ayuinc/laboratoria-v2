@@ -1,0 +1,136 @@
+#proveedores-grid {
+	color: steelblue;
+	background: #f2f2f2;
+	padding-bottom: 70px;
+	padding-top: 45px;
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+}
+
+#proveedores-grid ul li {
+	width: 33.28%;
+	float: left;
+	padding: 20px;
+}
+
+#proveedores-grid ul li .grid {
+	display: block;
+	text-align: center;
+	position: relative;
+	height: 230px;
+	border-radius: 10px;
+	opacity: 0.7;
+}
+
+#proveedores-grid ul li .grid:hover {
+	opacity: 1.0;
+}
+
+#proveedores-grid ul li .grid h2 {
+	width: 100%;
+	padding: 3px 0;
+	padding: 14px 0;
+	color: white;
+	background-color: rgba( 255 , 0 , 0 , 0.5 );
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+}
+
+#proveedores-grid ul li {
+	width: 33.28%;
+	float: left;
+	padding: 35px;
+}
+
+#proveedores-grid ul li .grid h2:hover {
+	background: rgba(255, 35, 5, 0.88);
+}
+
+#proveedores-grid ul li .grid h2 {
+	width: 100%;
+	padding: 3px 0;
+	padding: 14px 0;
+	color: white;
+	background-color: rgba( 255 , 0 , 0 , 0.5 );
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	border-radius: 0px 0px 10px 10px;
+}
+
+h1 {
+	font-family:'Montserrat', sans-serif;
+	color: steelblue;
+	text-align: center;
+}
+
+.description-list {
+	background-color: #CBC9CF;
+	margin-top: 11px;
+	border-radius: 5px;
+	padding: 10px 0px;
+	text-align: center;
+}
+
+.description-list span {
+	display: block;
+	padding: 0px 40px;
+	margin-top: 6px;
+	text-align: center;
+}
+
+#option {
+	color: steelblue;
+	background: #f2f2f2;
+	padding-top: 60px;
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.05) 50px);
+}
+
+
+#option ul li {
+	margin: 20px;
+	height: 30px;
+	padding: 0px 32px;
+	width: 29.28%;
+	float: left;
+}
+
+#option ul li .grid {
+	display: block;
+	text-align: center;
+	position: relative;
+	height: 45px;
+	font-size: 180%;
+	padding: 5px;
+	border-radius: 10px;
+	opacity: 0.7;
+	width: 232px;
+	background: #FD2879;
+	text-decoration: none;
+	color: white;
+}
+
+#option ul li .grid:hover {
+	display: block;
+	text-align: center;
+	position: relative;
+	height: 45px;
+	font-size: 180%;
+	padding: 5px;
+	border-radius: 10px;
+	opacity: 0.7;
+	width: 232px;
+	background: #FD2879;
+	text-decoration: none;
+	color: white;
+	border: 2px solid white;
+}
+

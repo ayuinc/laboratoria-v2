@@ -1,0 +1,10 @@
+body {
+  background-image: url(../img/casa.jpg);
+  background-size: cover;
+  font-family: 'Comfortaa', cursive;
+}
+
+#home-signup .container .register-wrapper { 
+  border-radius: 3px;
+  background: rgba(255,255,255,0.7);
+}

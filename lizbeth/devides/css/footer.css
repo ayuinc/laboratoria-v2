@@ -1,0 +1,32 @@
+.contacto,
+.social-buttons {
+	z-index: 1000;
+}
+
+.contacto {
+	position: fixed;
+	bottom: 28px;
+	left: 15px;
+	color: black;
+}
+
+.social-buttons {
+	position: fixed;
+	bottom: 10px;
+	right: 15px;
+}
+
+.social-buttons li {
+	float: left;
+	margin-left: 7px;
+	height: 35px;
+	width: 35px;
+	background: white;
+	color: black;
+}
+
+.social-buttons .facebook {
+}
+
+.social-buttons .pinterest {
+}

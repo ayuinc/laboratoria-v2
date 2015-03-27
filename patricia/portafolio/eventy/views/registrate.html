@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/forms.css">
+		<link rel="stylesheet" href="../css/global.css">
+		<link rel="stylesheet" href="../css/header.css">
+		<link rel="stylesheet" href="../css/fold.css">
+		<link rel="stylesheet" href="../css/proveedores.css">
+		<link rel="stylesheet" href="../css/footer.css">
+		<link rel="stylesheet" href="../css/como-funciona.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<a href="../index.html"> <img src="../img/logo.jpg" style=" width="100px" ; height="40px" "> </a>
+					</div>
+					<div class="col-md-10 text-right">
+						<nav>
+							<a href="../index.html">Home</a>
+							<a href="registrate.html">Registrate</a>
+							<a href="login.html">log in</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--<div class="overlay"></div>-->
+		<section id="fold-registrate">
+			<div class="container">
+<!-- FORMULARIO DE INGRESO -->
+			<form class="container-registrate">
+			<h1>Registrate como proveedor</h1>
+				<fieldset class="row">
+					<div class="col-md-6">
+						<label for="nombre-usuario">Nombre</label>
+						<input type="text" class="form-control" name="nombre-usuario">
+					</div>
+					<div class="col-md-6">
+						<label for="apellido-usuario">Apellido</label>
+						<input type="text" class="form-control" name="apellido-usuario">
+					</div>
+				</fieldset>
+				<fieldset>
+					<label for="email-usuario">Correo electrónico<sup>*</sup></label>
+					<input type="email" class="form-control" name="email-usuario" value="@gmail.com">
+					<small>(*) Campo obligatorio</small>
+				</fieldset>
+				<fieldset>
+					<label for="empresa">Nombre de la empresa<sup>*</sup></label>
+					<input type="empresa" class="form-control" name="empresa">
+					<small>(*) Campo obligatorio</small>
+				</fieldset>
+				<fieldset>
+					<label for="web">Sitio Web<sup>*</sup></label>
+					<input type="web" class="form-control" name="web">
+					<small>(*) Campo obligatorio</small>
+				</fieldset>
+				<fieldset>
+					<label>¿Qué tipo de servicio ofrece?</label>
+					<div class="col-md-6">
+						<label for="buffet">
+							<input type="radio" name="opciones" id="buffet"> Buffet
+						</label>
+						<label for="musica">
+							<input type="radio" name="opciones" id="musica"> Música
+						</label>
+						<label for="local">
+							<input type="radio" name="opciones" id="local"> Local
+						</label>
+					</div>
+					<div class="col-md-6">
+						<label for="toldo">
+							<input type="radio" name="opciones" id="toldo"> Toldo
+						</label>
+						<label for="mesasysillas">
+							<input type="radio" name="opciones" id="mesasysillas"> Mesas y sillas
+						</label>
+						<label for="personal">
+							<input type="radio" name="opciones" id="personal"> Personal
+						</label>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label>¿En qué parte de Lima brinda el servicio?</label>
+					<div class="col-md-6">
+						<label for="distrito-usuario"> Distrito</label>
+					</div>
+					<div class="col-md-6">
+						<select>
+							<option value="selecciona">Selecciona tu distrito</option>
+							<option value="Lima">Lima</option>
+							<option value="Ate">Ate</option>
+							<option value="Breña">Breña</option>
+							<option value="Carabayllo">Carabayllo</option>
+							<option value="Chorrillos">Chorrillos</option>
+							<option value="Comas">Comas</option>
+							<option value="Independencia">Independencia</option>
+							<option value="Jesús María">Jesús María</option>
+							<option value="La Molina">La Molina</option>
+							<option value="La Victoria">La Victoria</option>
+							<option value="Lince">Lince</option>
+							<option value="Los Olivos">Los Olivos</option>
+							<option value="Magdalena del Mar">Magdalena del Mar</option>
+							<option value="Pueblo Libre">Pueblo Libre</option>
+							<option value="Miraflores">Miraflores</option>
+							<option value="Pachacamac">Pachacamac</option>
+							<option value="Puente Piedra">Puente Piedra</option>
+							<option value="Rímac">Rímac</option>
+							<option value="San Borja">San Borja</option>
+							<option value="San Isidro">San Isidro</option>
+							<option value="San Juan de Lurigancho">San Juan de Lurigancho</option>
+							<option value="San Juan de Miraflores">San Juan de Miraflores</option>
+							<option value="San Luis">San Luis</option>
+							<option value="San Martín de Porres">San Martín de Porres</option>
+							<option value="San Miguel">San Miguel</option>
+							<option value="Santiago de Surco">Santiago de Surco</option>
+							<option value="Surquillo">Surquillo</option>
+							<option value="Villa El salvador">Villa El salvador</option>
+							<option value="Villa María del Triunfo">Villa María del Triunfo</option>
+						</select>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="col-md-6">
+						<label for="costo-usuario">Costo del servicio</label>
+					</div>
+					<div class="col-md-6">
+						<select>
+							<option value="selecciona" selected="selected">Seleccione</option>
+							<option value="costo-hora">Costo por hora</option>
+							<option value="costo-persona">Costo por persona</option>
+						</select>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="col-md-6">
+						<label for="precio-usuario">Precio</label>
+					</div>
+					<div class="col-md-6">
+						<input type="text" class="form-control" name="precio-usuario" value="S/.">
+					</div>
+				</fieldset>
+				<fieldset>
+					<label for="contraseña">Contraseña</label>
+					<input type="password" class="form-control" name="contraseña">
+				</fieldset>
+				<fieldset>
+					<label for="foto-de-perfil">Foto de perfil</label>
+					<input type="file" name="foto-de-perfil">
+				</fieldset>
+					<input type="submit" value="Enviar">
+			</form>
+		</div>
+		</section>
+	</body>
+</html>

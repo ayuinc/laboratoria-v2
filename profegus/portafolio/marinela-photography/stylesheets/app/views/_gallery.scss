@@ -1,0 +1,19 @@
+.gallery {
+	padding-top: 63px;
+}
+
+.isotope-container {
+	.isotope-item {
+		width: 24.95%;
+		padding: 7px;
+		float: left;
+		a {
+			display: block;
+			position: relative;
+			background: $gray-dark;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

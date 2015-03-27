@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="../css/grid.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/forms.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<div class="logo">
+						<h3>Don Gus</h3>
+					</div>
+				</div>
+				<div class="col-7">
+					<div class="row nav p-0">
+						<div class="col-4 p-0">
+							<a href="../index.html">Productos</a>
+						</div>
+						<div class="col-4 p-0">
+							<a href="../vistas/crear-producto.html">Crear producto</a>
+						</div>
+						<div class="col-4 p-0">
+							<a href="../vistas/mi-perfil.html">Mi perfil</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="login">
+						<a href="../vistas/ingresar.html">Ingresar</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h1>Ingresar</h1>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<form>
+							<fieldset class="row">
+								<div class="col-6 p-0">
+									<label for="nombre-usuario">Nombre</label>
+									<input type="text" name="nombre-usuario">
+								</div>
+								<div class="col-6">
+									<label for="apellido-usuario">Apellido</label>
+									<input type="text" name="apellido-usuario">
+								</div>
+							</fieldset>
+							<fieldset>
+								<label for="email-usuario">Correo electrónico <sup>*</sup></label>
+								<input type="email" name="email-usuario" required placeholder="ejemplo@mail.com" >
+								<small>(*) Campo obligatorio</small>
+							</fieldset>
+							<fieldset>
+								<label for="email-usuario-2">Correo electrónico 2 <sup>*</sup></label>
+								<input type="email" name="email-usuario-2" required value="@gmail.com" >
+								<small>(*) Campo obligatorio</small>
+							</fieldset>
+							<fieldset>
+								<label>Género</label>
+								<label for="genero-masculino">
+									<input type="radio" name="opciones" id="genero-masculino">Masculino
+								</label>
+								<label for="genero-femenino">
+									<input type="radio" name="opciones" id="genero-femenino"> Femenino
+								</label>
+							</fieldset>
+							<fieldset class="row">
+							<strong>¿Cómo te enteraste de nosotros?</strong>
+								<div class="col-6">
+									<label for="facebook">
+										<input type="checkbox" id="Facebook"> <img src="../img/icono_facebook.png">
+									</label>
+									<label for="twitter">
+										<input type="checkbox" id="twitter"><img src="../img/twitter-icon.png">
+									</label>
+									<label for="youtube">
+										<input type="checkbox" id="youtube"><img src="../img/icono-youtube.png">
+									</label>
+									<label for="email">
+										<input type="checkbox" id="email"><img src="../img/mail2.png">
+									</label>
+									<label for="conocido">
+										<input type="checkbox" id="conocido"><img src="../img/per.png">
+									</label>
+									<label for="television">
+										<input type="checkbox" id="television"><img src="../img/tv.png">
+									</label>
+									<label for="radio">
+										<input type="checkbox" id="radio"><img src="../img/radio.png">
+									</label>
+								</div>
+							</fieldset>
+							<fieldset>
+								<label for="contrasena">Contraseña</label>
+								<input type="password" name="contraseña">
+							</fieldset>
+							<fieldset>
+								<label for="foto-de-perfil">Foto de perfil</label>
+								<input type="file" name="foto-de-perfil">
+							</fieldset>
+							<input type="submit" value="Enviar">
+						</form>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

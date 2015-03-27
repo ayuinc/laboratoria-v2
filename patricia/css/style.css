@@ -1,0 +1,174 @@
+/* GLOBAL */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* END:GLOBAL */
+
+body {
+	font-family: sans-serif;	
+	font-weight: 200;
+	letter-spacing: 0.9px;
+	background-image: url(../img/bokeh-bg.jpg);
+	/* background-repeat: no-repeat para no repetir la imagen */
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* REUTILIZABLES */
+.p-0 {
+	padding: 0 !important;
+}
+
+/* END: REUTILIZABLES; */
+
+img {
+	border-radius: 5px 5px 0 0;
+}
+
+.container {
+	margin: 56px auto;
+	width: 665px; /*MEdida de un IPaD*/
+	/*height: 576px;*/
+	background: white;
+	box-shadow: 0px 3px 3px 3px rgba( 0,0,0,0.3 );
+	border-radius: 5px;
+}
+
+#cover {
+	background: url(../img/cover.jpg) no-repeat center center;
+	background-size: cover;
+	height: 210px;
+	border-radius: 5px;
+	position: relative; /*Para manipular elementos dentro*/
+}
+
+#cover a.overlay {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	-webkit-transition: all 0.3s ease; 
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#cover a.overlay:hover {
+	background: rgba(0,0,0,0.5);
+	-webkit-transition: all 0.3s ease; /* transicion del la imagen al pasar el mouse de 3 seg */
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#cover .data-anim {
+	-webkit-transition: all 0.3s ease; /* transicion del la imagen al pasar el mouse de 3 seg */
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#cover a.overlay:hover .data-anim {
+	padding-left: 0px;
+	-webkit-transition: all 0.3s ease; /* transicion del la imagen al pasar el mouse de 3 seg */
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#cover .name {
+	position: absolute;
+	width: 100%; /*no salga aplastada la letra*/
+	bottom: 0; /*letra hasta abajo*/
+	color: white;
+}
+
+#profile .bio p, #profile .email  {
+	font-size: 14px;
+	margin: 7px 0;
+	line-height: 16px;
+	letter-spacing: 0.9px;
+}
+
+#profile .bio a, #profile .email  {
+	text-decoration: none;
+	color: gray;
+	font-size: 11px;
+}
+
+#profile .profile-pic {
+	position: absolute;
+	width: 140px;
+	height: auto;
+	border-radius: 50%;
+	top: 195px;
+	padding: 3px;
+	background: white;
+}
+
+#profile .relative {
+	height: 76px;
+	margin-left: 30px;
+}
+
+#profile .portafolio {
+	padding-top: 21px;
+}
+
+#profile .portafolio ul.list-unstyled {
+	list-style-type: none;
+	padding-top: 21px;
+}
+
+#profile .portafolio ul.list-unstyled li {
+	float: left;
+	width: 49.5%;
+	margin-bottom: 14px;
+}
+
+#profile .portafolio ul.list-unstyled li:nth-child(even) {
+	padding: 0 0 0 7px;
+}
+
+#profile .portafolio ul.list-unstyled li:nth-child(odd) {
+	padding: 0 7px 0 0;
+}
+
+#profile .portafolio ul.list-unstyled li a {
+	display: block;
+	border-radius: 3px;
+	min-height: 140px;
+	box-shadow: 0px 2px 2px 2px whitesmoke;
+	color: gray;
+	text-decoration: none;
+}
+
+#profile .portafolio ul.list-unstyled li a:hover {
+	box-shadow: 0px 0px 2px 1px cornflowerblue;
+}
+
+#profile .portafolio ul.list-unstyled li a img {
+	width: 100%;
+	height: auto;
+	border-radius: 3px 3px 0 0;
+}
+
+#profile .portafolio ul.list-unstyled li a .portafolio-img {
+	height: 112px;
+	overflow: hidden;
+}
+
+#profile .portafolio ul.list-unstyled li a .portafolio-name {
+	padding: 7px;
+}
+
+#profile .portafolio ul.list-unstyled li a .portafolio-name span {
+	font-size: 14px;
+	color: darkslategray;
+}
+
+#profile .portafolio ul.list-unstyled li a .portafolio-name small {
+	font-size: 11px;
+	color: red;
+}

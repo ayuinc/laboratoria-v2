@@ -1,0 +1,308 @@
+/*
+  CSS LAYOUTS
+  Relative and absolute positioning
+*/
+body {
+  /* Definir la altura es importante para que el navegador pueda calcular las dimensiones de la pantalla sobre el eje Y */
+  height: 100%;
+  min-height: 100%;
+}
+
+.cancha {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  padding: 30px;
+  background-image: url(../img/binding-light.png);
+  background-color: #5cb85c;
+  background-repeat: repeat;
+}
+.cancha .banda {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  border: 3px solid white;
+  /* Position relativa */
+  position: relative;
+}
+
+.arco,
+.pelota {
+  position: absolute;
+}
+
+/* ARCO */
+.arco {
+  top: 25%;
+  height: 350px;
+  width: 210px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.arco-izquierdo {
+  left: 0;
+  border-right: 2px solid white;
+}
+
+.arco-derecho {
+  right: 0;
+  border-left: 2px solid white;
+}
+
+/* OVALO CENTRAL */
+.ovalo-central {
+  margin: 0 auto;
+  width: 210px;
+  height: 210px;
+  padding-top: 18%;
+}
+.ovalo-central > div {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* PELOTAS */
+.pelota {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #eeeeee;
+  background-color: white;
+}
+
+.banda > .pelota {
+  top: 15%;
+  left: 45%;
+}
+
+.arco-izquierdo > .pelota {
+  top: 0;
+  right: -21px;
+}
+
+.arco-derecho > .pelota {
+  bottom: 0;
+  left: -35px;
+}
+
+/* 
+  Adicionalmente puedes agregar sombras a las pelotas e imagenes de fondo
+*/
+.pelota {
+  -webkit-box-shadow: 1px 1px 0px 1px rgba(85, 85, 85, 0.7);
+  -moz-box-shadow: 1px 1px 0px 1px rgba(85, 85, 85, 0.7);
+  box-shadow: 1px 1px 0px 1px rgba(85, 85, 85, 0.7);
+  background-image: url(../img/swirl_pattern.png);
+}
+
+/*
+  CSS LAYOUTS
+  Floats
+*/
+.canvas:before, .canvas:after,
+.color-block > div:before,
+.color-block > div:after {
+  content: " ";
+  display: table;
+}
+.canvas:after,
+.color-block > div:after {
+  clear: both;
+}
+
+.canvas {
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+}
+.canvas .left,
+.canvas .right {
+  height: 100%;
+  width: 50%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.color-block {
+  position: absolute;
+  width: 100%;
+}
+.color-block > div {
+  margin: 0 auto;
+}
+
+.color-block-bottom {
+  bottom: 0;
+}
+
+.color-block-lg {
+  z-index: 8;
+}
+.color-block-lg > div {
+  width: 992px;
+}
+.color-block-lg .left,
+.color-block-lg .right {
+  height: 350px;
+}
+
+.color-block-md {
+  z-index: 9;
+}
+.color-block-md > div {
+  width: 768px;
+}
+.color-block-md .left,
+.color-block-md .right {
+  height: 210px;
+}
+
+.color-block-sm {
+  z-index: 10;
+}
+.color-block-sm > div {
+  width: 480px;
+}
+.color-block-sm .left,
+.color-block-sm .right {
+  height: 140px;
+}
+
+.center-balls {
+  z-index: 11;
+  padding-top: 21%;
+}
+.center-balls ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  width: 35px;
+  height: 100%;
+  margin: 0 auto;
+}
+.center-balls ul li {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.center-balls ul li:nth-child(n+1) {
+  background-color: #222222;
+}
+.center-balls ul li:nth-child(n+2) {
+  background-color: #333333;
+}
+.center-balls ul li:nth-child(n+3) {
+  background-color: #555555;
+}
+.center-balls ul li:nth-child(n+4) {
+  background-color: #777777;
+}
+.center-balls ul li:nth-child(n+5) {
+  background-color: #eeeeee;
+}
+.center-balls ul li:nth-child(n+6) {
+  background-color: #fff;
+}
+
+.copyright {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 7.5px 30px;
+  color: #222222;
+}
+.copyright a {
+  color: #222222;
+}
+.copyright a:hover {
+  color: black;
+}
+
+/*
+  CSS LAYOUTS
+  Utilidades
+*/
+/* CLEARFIX */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* COLORES */
+.bg-primary {
+  background-color: #337ab7;
+}
+
+.bg-success {
+  background-color: #5cb85c;
+}
+
+.bg-info {
+  background-color: #5bc0de;
+}
+
+.bg-warning {
+  background-color: #f0ad4e;
+}
+
+.bg-danger {
+  background-color: #d9534f;
+}
+
+.bg-blue-darker {
+  background-color: #3a4959;
+}
+
+.bg-blue-dark {
+  background-color: #647e9a;
+}
+
+.bg-blue {
+  background-color: #8fa2b6;
+}
+
+.bg-blue-light {
+  background-color: #e6eaef;
+}
+
+.bg-blue-lighter {
+  background-color: #fbfcfd;
+}
+
+.bg-gray-darker {
+  background-color: #222222;
+}
+
+.bg-gray-dark {
+  background-color: #333333;
+}
+
+.bg-gray {
+  background-color: #555555;
+}
+
+.bg-gray-light {
+  background-color: #777777;
+}
+
+.bg-gray-lighter {
+  background-color: #eeeeee;
+}
+
+.bg-white {
+  background-color: #fff;
+}

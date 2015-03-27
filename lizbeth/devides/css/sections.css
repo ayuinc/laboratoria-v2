@@ -1,0 +1,20 @@
+section {
+	/*padding: 21px;*/
+	padding-right:14px;
+	padding-left:14px;
+	padding-bottom: 70px;
+	padding-top:14px;
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+}
+
+section > .container {
+	width: 100%;
+	min-height: 100%;
+	padding: 70px 70px 70px 240px;
+}
+
+section .content p {
+	text-align: justify;
+}
