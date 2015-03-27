@@ -2,6 +2,14 @@ $(document).ready ->
 	$sectionNav = $('.header')
 	$navSectionRef = $('.smooth-scroll a')
 
+<<<<<<< HEAD
+=======
+	# DISABLE ANCHORS
+	$('.disable-anchors a').click (e)->
+		e.preventDefault()
+		return
+
+>>>>>>> 3e3e27ee49d155029370dad2072e3676482bf5de
 	$(document).on 'scroll', onScroll
 
 	# SMOOTH SCROLL CON VELOCITY JS

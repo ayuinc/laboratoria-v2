@@ -1,0 +1,132 @@
+.header {
+	border-bottom: 1px solid darken($brand-primary, 7%);
+	background: rgba($brand-primary, 0.9);
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	height: 102px;
+	@media #{$xs-only} {
+		height: 70px;
+	}
+	@include transition(height 0.2s ease-in-out);
+	.border-bottom {
+		display: none;
+	}
+	.row {
+		padding: 28px 0;
+		padding: rem(28) 0;
+		@media #{$xs-only} {
+			padding: 14px 0;
+			padding: rem(14) 0;
+		}
+	}
+	.logo {
+		@media #{$xs-only} {
+			text-align: center;
+		}
+		a {
+			font-size: $font-size-h2;
+			color: white;
+			@include transition(all 0.2s ease-in-out);
+			&:hover {
+				color: darken($brand-primary, 14%);
+				text-decoration: none;
+			}
+			img {
+				width: 210px;
+				height: auto;
+				@include transition(all 0.2s ease-in-out);
+			}
+			&.scroll {
+				display: none;
+			}
+		}
+	}
+	nav {
+		text-align: right;
+		padding: 7px 0;
+		a {
+			font-size: $font-size-h4;
+			font-size: rem($font-size-h4);
+			color: white;
+			text-transform: uppercase;
+			@include light;
+			padding-left: 21px;
+			padding-left: rem(21);
+			@include transition(all 0.2s ease-in-out);
+			&:hover {
+				text-decoration: none;
+				color: $gray-darker;
+			}
+		}
+	}
+	&.on-scroll {
+		position: fixed;
+		width: 100%;
+		z-index: 1000;
+		border-bottom: 1px solid darken(white, 14%);
+		background: white;
+		height: 66px;
+		@include transition(height 0.2s ease-in-out);
+		.row {
+			padding: 14px 0;
+			padding: rem(14) 0;
+		}
+		.logo {
+			a {
+				font-size: $font-size-h3;
+				color: $brand-primary;
+				@include transition(all 0.2s ease-in-out);
+				&:hover {
+					color: darken($brand-primary, 14%);
+				}
+				&.top {
+					display: none;
+				}
+				&.scroll {
+					display: block;
+				}
+				img {
+					width: 184px;
+					height: auto;
+					@include transition(all 0.2s ease-in-out);
+				}
+			}
+		}
+		nav {
+			a {
+				padding-left: 18px;
+				padding-left: rem(18);
+				font-size: $font-size-h5;
+				font-size: rem($font-size-h5);
+				color: $gray;
+				@include transition(all 0.2s ease-in-out);
+				&:hover {
+					color: $gray-dark;
+				}
+				&.active {
+					color: $brand-primary;
+				}
+			}
+		}
+		.border-bottom {
+			display: block;
+		}
+	}
+}
+
+.border-bottom {
+	@include list-unstyled;
+	@include clearfix;
+	li {
+		float: left;
+		width: 20%;
+		height: 2px;
+		$brand-primary-light: lighten($brand-primary, 21%);
+		@for $i from 1 through 5 {
+			&:nth-child(#{$i}) {
+				background-color: adjust-hue($brand-primary, random(100)-1);
+			}
+		}
+	}
+}

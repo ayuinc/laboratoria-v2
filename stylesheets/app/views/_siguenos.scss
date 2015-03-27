@@ -1,0 +1,92 @@
+$facebook: #3B5998;
+$twitter:  #33CCFF;
+$youtube:  #E42526;
+$instagram: #4187FB;
+
+#siguenos {
+	.social {
+		> li {
+			a {
+				width: 210px;
+				height: 210px;
+				border: 2px solid $gray-lighter;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+				&:hover {
+					.overlay {
+						@include transform(translateX(0));
+						@include transition(all 0.2s ease-in-out);
+					}
+				}
+				.overlay {
+					position: absolute;
+					width: 210px;
+					height: 210px;
+					padding: $grid-gutter-width / 2;
+					@include transform(translateX(-100%));
+					@include transition(all 0.2s ease-in-out);
+				}
+				h1 {
+					position: absolute;
+					top: $grid-gutter-width / 2;
+					left: $grid-gutter-width / 2;
+					margin: 0;
+					text-align: left;
+					font-size: $font-size-h3;
+					color: white;
+					@include bold;
+					z-index: 30;
+				}
+				.icon {
+					position: absolute;
+					bottom: $grid-gutter-width / 2;
+					right: $grid-gutter-width / 2;
+					width: 52px;
+					height: 52px;
+					z-index: 30;
+				}
+				&.facebook {
+					.overlay {
+						background: $facebook;
+					}
+					.icon {
+						background: url(../assets/icons/social.png) no-repeat -6px -3px;
+					}
+				}
+				&.youtube {
+					.overlay {
+						background: $youtube;
+					}
+					.icon {
+						background: url(../assets/icons/social.png) no-repeat -119px -3px;
+					}
+				}
+				&.twitter {
+					.overlay {
+						background: $twitter;
+					}
+					.icon {
+						background: url(../assets/icons/social.png) no-repeat -233px -3px;
+					}
+				}
+				&.instagram {
+					.overlay {
+						background: $instagram;
+					}
+					.icon {
+						background: url(../assets/icons/social.png) no-repeat -289px -3px;
+					}
+				}
+				&.contact {
+					.overlay {
+						background: $brand-primary;
+					}
+					.icon {
+						background: url(../assets/icons/social.png) no-repeat -345px -3px;
+					}
+				}
+			}
+		}
+	}
+}

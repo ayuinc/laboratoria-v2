@@ -1,0 +1,251 @@
+.support-progress-bar {
+	height: 210px;
+	position: relative;	
+	padding-top: 42px;
+	@media #{$md-down} {
+		// float: none;
+		display: none;		
+	}
+	.bar {
+		position: absolute;
+		background: $brand-warning;
+		// width: 350px;
+		height: 176px;
+	}
+	.girls {
+		position: absolute;
+		width: 768px;
+		height: 176px;
+		background: url(../assets/img/support-progress-bar.png) no-repeat left center;
+	}
+}
+
+.counter {
+	color: $brand-warning;
+	// float: right;
+	margin: 0 auto;
+	@media #{$md-down} {
+		// float: none;
+	}
+	text-align: center;
+	padding: 21px;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	border: 2px solid $brand-warning;
+	padding-top: 56px;
+	span {
+		display: block;
+		&:first-child {
+			position: relative;
+			font-size: 84px;
+			font-size: rem(84);
+			line-height: 77px;
+			&:after {
+				content: "/ 100";
+				font-size: 14px;
+				position: absolute;
+				top: -25px;
+			}
+		}
+		&:nth-child(n+2) {
+			font-size: 21px;
+			font-size: rem(21);
+		}
+	}
+}
+
+.coder-plus {
+	margin: 0 auto;
+	width: 770px;
+	height: 585px;
+	// border: 2px solid darken($gray-lighter, 3%);
+	// background: url(../assets/img/flat-browser.png) no-repeat center center;
+	border-radius: 3px;
+	position: relative;
+	padding: 210px 0;
+	padding: rem(210) 0;
+	@media #{$sm-down} {
+		width: 100%;
+	}
+	.heading {
+		position: absolute;
+		text-align: center;
+		top: -49px;
+		width: 100%;
+		h1 {
+			background: white;
+			padding: 7px 14px;
+			border-radius: 5px;
+			display: inline-block;
+		}
+	}
+	.wrapper {
+		background: white;
+		@include box-shadow(0px 1px 1px 0px $gray-light);
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-top-left-radius: 80px;
+		border-bottom-left-radius: 80px;
+		min-height: 70px;
+		width: $screen-xs;
+		margin: 0 auto;
+		@media #{$xs-only} {
+			border-radius: 5px;
+			width: 280px;
+			margin: 0 auto;
+			padding-top: 21px;
+		}
+		@include clearfix;
+		.question-mark {
+			padding: 5px;
+			border-radius: 50%;
+			float: left;
+			@media #{$xs-only} {
+				float: none;
+				text-align: center;
+			}
+			img {
+				width: 140px;
+				height: auto;
+			}
+		}
+		.body {
+			float: left;
+			@media #{$xs-only} {
+				float: none;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.donations-grid {
+	a {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		&:hover {
+			text-decoration: none;
+			img {
+				@include transform(scale(1.1));
+				@include transition(all 0.2s ease-in-out);
+			}
+			.overlay {
+				div {
+					button {
+						opacity: 1;
+						@include transform(translateY(0));
+						@include transition(all 0.2s ease-in-out);
+					}
+					h3, h4 {
+						@include transform(translateY(-7px));
+						@include transition(all 0.2s ease-in-out);	
+					}
+				}
+			}
+		}
+		img {
+			@include transition(all 0.2s ease-in-out);
+		}
+		.overlay {
+			background: rgba($gray-darker, 0.7);
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			color: white;
+			@include thin;
+			text-align: center;
+			@include display(flex);
+			@include align-items(center);
+  		@include flex-direction(column);
+  		@include justify-content(center);
+  		div {
+  			max-height: 56px;
+  			@include flex(1);
+  			button {
+  				opacity: 0;
+  				@include transform(translateY(100%));
+  				@include transition(all 0.2s ease-in-out);
+  			}
+  			h3, h4 {
+					@include transition(all 0.2s ease-in-out);	
+				}
+  		}
+		}
+	}
+}
+
+.modal-content {
+	overflow: hidden;
+	.close {
+		position: absolute;
+		right: $container-fluid;
+		top: $container-fluid;
+		z-index: 1010;
+	}
+	.overlay {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: $border-radius-base;
+		text-align: center;
+		color: white;
+		@include display(flex);
+		@include align-items(center);
+		@include flex-direction(column);
+		@include justify-content(center);
+		div {
+  		@include flex(1);	
+		}
+	}
+	.overlay-success,
+	.overlay-error {
+		@include transform(translateY(-100%));
+		@include transition(translateY 0.2s ease-in-out);
+		z-index: 1000;
+		div {
+			max-height: 210px;
+		}
+	}
+	.overlay-success {
+		background: $brand-success;
+		@include transition(translateY 0.2s ease-in-out);
+	}
+	.overlay-error {
+		background: $brand-danger;
+		@include transition(translateY 0.2s ease-in-out);
+	}
+	.overlay-on-send {
+		background: rgba(#fff, 0.7);
+		z-index: 900;
+		@include transform(translateY(-100%));
+		@include transition(translateY 0.2s ease-in-out);
+		div {
+			max-height: 70px;
+		}
+	}
+	&.ajax-on-send {
+		.overlay-on-send {
+			@include transform(translateY(0));
+			@include transition(all 0.2s ease-in-out);
+		}
+	}
+	&.ajax-success {
+		.overlay-success {
+			@include transform(translateY(0));
+			@include transition(all 0.2s ease-in-out);
+		}
+	}
+	&.ajax-error {
+		.overlay-error {
+			@include transform(translateY(0));
+			@include transition(all 0.2s ease-in-out);
+		}
+	}
+}

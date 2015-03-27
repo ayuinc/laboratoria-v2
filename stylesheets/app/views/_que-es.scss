@@ -1,0 +1,22 @@
+#que-es {
+	.video {
+		width: 800px;
+		background: url(../assets/img/flat-browser.png) no-repeat center center;
+		margin: 0 auto;
+		padding-top: 148px;
+		@media #{$sm-down} {
+			width: 100%;
+			height: auto;
+			background: none;
+			padding-top: 14px;
+			iframe {
+				height: 350px;
+			}
+		}
+	}
+}
+
+.reconocimientos {
+	border-top: 1px solid $gray-lighter;
+	border-bottom: 1px solid $gray-lighter;
+}
