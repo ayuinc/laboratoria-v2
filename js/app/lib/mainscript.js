@@ -7,12 +7,12 @@
     $sectionNav = $('.header');
     $navSectionRef = $('.smooth-scroll a');
     $('.disable-anchors a').click(function(e) {
-      e.preventDefault();
+      // e.preventDefault();
     });
     $(document).on('scroll', onScroll);
     $navSectionRef.on('click', function(e) {
       var $target, target;
-      e.preventDefault();
+      // e.preventDefault();
       target = this.hash;
       $target = $(target);
       $(target).velocity('scroll', {

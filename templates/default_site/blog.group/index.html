@@ -1,0 +1,29 @@
+{embed="includes/header"}
+        <div id="blog" class="bg-white">
+          <div class="container mt-56">
+          	<div class="row">
+          		<div class="col-xs-8 col-xs-offset-2">
+		            <h1 class="text-center uppercase bold">Blog</h1>
+		            <ul class="separator-line"><li></li><li></li></ul>
+
+									{exp:channel:entries channel="blog" limit="10"}
+					            <div class="p-28 pb-63">
+					            	<div>
+											    {blog-imagen}
+														<img class="text-center" src="{image:url:large}" width="100%">
+											    {/blog-imagen}
+											    <h2 class="mt-28 mb-0">{title}</h2>
+											    <p class="thin mt-7">{entry_date format="%d de %F, %Y"}</p>
+											    <p class="thin h4">{blog-introduccion}</p>
+					            		<a href="{site_url}blog/post/{url_title}">Lee más »</a>
+					            	</div>
+				  	          </div>
+									    {paginate}
+									        <p>Página {current_page} de {total_pages} páginas {pagination_links}</p>
+									    {/paginate}
+									{/exp:channel:entries}	          			
+          		</div>
+          	</div>
+          </div>
+        </div>
+{embed="includes/footer"}
