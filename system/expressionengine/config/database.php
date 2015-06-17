@@ -4,8 +4,8 @@ $active_group = 'expressionengine';
 $active_record = TRUE;
 
 $db['expressionengine']['hostname'] = 'localhost';
-$db['expressionengine']['username'] = 'laboratoria_r';
-$db['expressionengine']['password'] = 'Lab0r@t0riA2014';
+$db['expressionengine']['username'] = 'root';
+$db['expressionengine']['password'] = '57HkXMzkAz';
 $db['expressionengine']['database'] = 'laboratoria_db';
 $db['expressionengine']['dbdriver'] = 'mysqli';
 $db['expressionengine']['pconnect'] = FALSE;
@@ -16,7 +16,7 @@ $db['expressionengine']['cache_on'] = FALSE;
 $db['expressionengine']['autoinit'] = FALSE;
 $db['expressionengine']['char_set'] = 'utf8';
 $db['expressionengine']['dbcollat'] = 'utf8_general_ci';
-$db['expressionengine']['cachedir'] = '/Users/alejandro/Sites/laboratoria-v2/system/expressionengine/cache/db_cache/';
+$db['expressionengine']['cachedir'] = '/var/www/html/system/expressionengine/cache/db_cache/';
 
 /* End of file database.php */
 /* Location: ./system/expressionengine/config/database.php */

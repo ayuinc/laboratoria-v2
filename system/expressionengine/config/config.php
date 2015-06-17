@@ -15,7 +15,7 @@ $config['app_version'] = '2.10.1';
 $config['license_contact'] = '';
 $config['license_number'] = 'CORE LICENSE';
 $config['debug'] = '1';
-$config['cp_url'] = 'http://localhost/admin.php';
+$config['cp_url'] = 'http://laboratoria.la/admin.php';
 $config['doc_url'] = 'http://ellislab.com/expressionengine/user-guide/';
 $config['is_system_on'] = 'y';
 $config['allow_extensions'] = 'y';
@@ -23,8 +23,10 @@ $config['cache_driver'] = 'file';
 $config['cookie_prefix'] = '';
 $config['cookie_httponly'] = 'y';
 
+$config['index_page'] = '';
 
 // END EE config items
+
 
 /*
 |--------------------------------------------------------------------------
