@@ -7298,3 +7298,10 @@ body.profile-on {
         text-transform: capitalize; }
   #profiles .grid-list.quick-view-grid > li.profile-on a .overlay {
     display: block; }
+    
+.blog-title-link{
+  color: #262624; 
+  &:hover{
+    darken(#262624, 20);
+  }
+}
