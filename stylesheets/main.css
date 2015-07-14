@@ -7304,6 +7304,6 @@ body.profile-on {
 }
 
 .blog-title-link:hover{
-    color: black;
-    font-weight: bold;
+  font-weight: bold;
+  text-decoration: none;  
 }
